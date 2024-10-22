@@ -1,0 +1,386 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  /* Add gradient background */
+  background: linear-gradient(135deg, #1e1e1e, #0a0a0a);
+  color: #dcdcdc;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-color: #292929;
+
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+/* Navbar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292929;
+  padding: 15px 20px;
+  top: 0;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+}
+
+.logo p {
+  font-size: 30px;
+  margin-top: 8px;
+  color: rgb(75, 147, 195);
+}
+
+.nav-conntents ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-conntents ul li {
+  margin-right: 20px;
+  font-size: 20px;
+  position: relative;
+}
+
+.nav-conntents ul li a {
+  text-decoration: none;
+  color: #dcdcdc;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-conntents ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00d1b2;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-conntents ul li a:hover::after {
+  width: 100%;
+}
+
+.nav-conntents ul li a:hover {
+  color: #00d1b2;
+}
+
+/* Button styles */
+.nav-conntents button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #00d1b2;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-conntents button:hover {
+  background-color: #00bfa5;
+  transform: translateY(-2px);
+}
+
+.nav-conntents button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* First Section */
+@keyframes zoomOut {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 120%;
+  }
+}
+
+.firstSection {
+  background-image: url('/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named \'CodeWave\'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 90vh;
+  color: white;
+  animation: zoomOut 15s infinite alternate;
+}
+
+.firstSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.firstSection .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 60px;
+  margin-top: 50px;
+}
+.content h2 {
+  font-size: 40px;
+  margin-top: 50px;
+  color: rgb(197, 197, 243);
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #00d1b2;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.cta-btn a{
+  text-decoration: none;
+color: white;
+}
+
+.cta-btn:hover {
+  background-color: #00bfa5;
+  transform: translateY(-5px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #dcdcdc;
+}
+.scroll-indicator  a{
+  text-decoration: none;
+  color: white;
+}
+.scroll-indicator span {
+  display: block;
+  font-size: 24px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Typing effect */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: white;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Features Section */
+.features {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+.features h2 {
+  color: #2bb2ae;
+  font-size: 50px;
+}
+
+.underline {
+  width: 100px;
+  height: 4px;
+  background-color: #5c5d5d;
+  margin: 0 auto;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+.underline-large{
+  width: 200px;
+  height: 4px;
+  background-color: #5c5d5d;
+  margin: 0 auto;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+.feature {
+  display: inline-block;
+  width: 30%;
+  margin: 15px;
+  padding: 20px;
+  background: rgba(75, 147, 195, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.feature h3 {
+  font-size: 25px;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+/* Multiple Languages Section */
+.languages-section {
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+.languages-section p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.languages-section h2 {
+  color: #2bb2ae;
+  font-size: 40px;
+}
+
+.language-selector {
+  margin: 20px 0;
+}
+
+.lang-btn {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: #6f7070;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.lang-btn:hover {
+  background-color: #323232;
+  transform: translateY(-5px);
+}
+
+.code-display {
+  margin-top: 30px;
+  background-color: #3b3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  color: #dcdcdc;
+  font-family: 'Courier New', monospace;
+}
+
+.code-snippet {
+  white-space: pre-wrap;
+  font-size: 16px;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .lang-btn {
+      margin-bottom: 10px;
+      width: 100%;
+  }
+
+  .code-display {
+      text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .nav-conntents ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-conntents ul li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .nav-conntents button {
+    margin-bottom: 10px;
+  }
+
+  .feature {
+    width: 80%;
+  }
+}

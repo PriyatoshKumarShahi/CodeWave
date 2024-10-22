@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeWave - Coding Arena</title>
+    <link rel="stylesheet" href="/css/main-styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png"
+          alt="CodeWave Logo"
+          height="60"
+          style="border-radius: 50%"
+        />
+        <p>CodeWave</p>
+      </div>
+      <div class="nav-conntents">
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="index.html">Start Coding</a></li>
+          <button><a href="sign-in.html">Login</a></button>
+          <button><a href="sign-up.html">Register</a></button>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="firstSection">
+      <div class="content">
+        <h1>Code faster with AI suggestions</h1>
+        <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
+        <button class="cta-btn"><a href="index.html">Get Started</a></button>
+      </div>
+      <div class="scroll-indicator">
+        <a href="#features">Scroll Down</a>
+        <span>&#9660;</span>
+      </div>
+    </div>
+
+    <div class="languages-section">
+      <h2>Code in Multiple Languages</h2>
+      <div class="underline-large"></div>
+      <p>
+        CodeWave supports a variety of programming languages like Javascript , Python , HTML , CSS to fit your project
+        needs. Choose a language to see a sample code snippet.
+      </p>
+
+      <!-- Language Selector -->
+      <div class="language-selector">
+        <button class="lang-btn" data-lang="html">HTML</button>
+        <button class="lang-btn" data-lang="css">CSS</button>
+        <button class="lang-btn" data-lang="js">JavaScript</button>
+        <button class="lang-btn" data-lang="python">Python</button>
+        <button class="lang-btn" data-lang="java">Java</button>
+      </div>
+
+      <!-- Code Display Area -->
+      <div class="code-display">
+        <pre id="html-code" class="code-snippet">
+    &lt;!-- HTML Code Example --&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;/div&gt;
+            </pre
+        >
+        <pre id="css-code" class="code-snippet" style="display: none">
+    /* CSS Code Example */
+    body {
+        background-color: #f4f4f4;
+        color: #333;
+    }
+            </pre
+        >
+        <pre id="js-code" class="code-snippet" style="display: none">
+    // JavaScript Code Example
+    console.log("Hello, World!");
+            </pre
+        >
+        <pre id="python-code" class="code-snippet" style="display: none">
+    # Python Code Example
+    print("Hello, World!")
+            </pre
+        >
+        <pre id="java-code" class="code-snippet" style="display: none">
+    // Java Code Example
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+            </pre
+        >
+      </div>
+    </div>
+
+    <div class="features" id="features">
+      <h2>Features</h2>
+      <div class="underline"></div>
+      <div class="feature">
+        <h3>Intuitive Interface</h3>
+        <p>
+          Experience a user-friendly interface that enhances your coding
+          efficiency.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Real-Time Collaboration</h3>
+        <p>
+          Work together with your team in real-time, no matter where you are.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Customizable Themes</h3>
+        <p>
+          Personalize your coding environment with a variety of themes provided
+          here.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Typing effect JavaScript
+    const typedText = document.querySelector(".typed-text");
+    const cursor = document.querySelector(".cursor");
+
+    const textArray = [
+      "Collaborate in real-time",
+      "Customize your coding experience",
+    ];
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        typedText.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typedText.textContent = textArray[textArrayIndex].substring(
+          0,
+          charIndex - 1
+        );
+        charIndex--;
+        setTimeout(erase, 100);
+      } else {
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, 1000);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(type, 1000);
+    });
+
+    const buttons = document.querySelectorAll(".lang-btn");
+    const codeSnippets = document.querySelectorAll(".code-snippet");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const lang = button.getAttribute("data-lang");
+
+        // Hide all code snippets
+        codeSnippets.forEach((snippet) => {
+          snippet.style.display = "none";
+        });
+
+        // Show the selected language's code snippet
+        document.getElementById(`${lang}-code`).style.display = "block";
+      });
+    });
+  </script>
+</html>

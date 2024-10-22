@@ -1,0 +1,202 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e; /* Dark background */
+  color: #dcdcdc; /* Light text */
+  line-height: 1.6; /* Improve readability */
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+/* Navbar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292929;
+  padding: 15px 20px;
+  top: 0;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+}
+
+.logo p {
+  font-size: 30px;
+  margin-top: 8px;
+  color: rgb(75, 147, 195);
+}
+
+.nav-conntents ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-conntents ul li {
+  margin-right: 20px;
+  font-size: 20px;
+  position: relative;
+}
+
+.nav-conntents ul li a {
+  text-decoration: none;
+  color: #dcdcdc;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-conntents ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00d1b2;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-conntents ul li a:hover::after {
+  width: 100%;
+}
+
+.nav-conntents ul li a:hover {
+  color: #00d1b2;
+}
+
+/* Button styles */
+.nav-conntents button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #00d1b2;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-conntents button:hover {
+  background-color: #00bfa5;
+  transform: translateY(-2px);
+}
+
+.nav-conntents button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Code editor container */
+.editor-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  transition: box-shadow 0.4s ease;
+}
+
+.editor-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #2a2a2a; /* Darker background for editor sections */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  transition: box-shadow 0.4s ease;
+}
+
+.editor-section:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.editor-section h3 {
+  background-color: gray;
+  color: #fff;
+  padding: 10px;
+  font-size: 22px;
+  text-align: center;
+  margin: 0;
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  background-color: #2e2e2e;
+  color: white;
+  border: 1px solid #444;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 0 0 5px 5px; /* Match rounded corners */
+  resize: none; /* Disable resize for uniformity */
+}
+
+/* Main heading styling */
+.main-heading {
+  font-size: 50px;
+  color: #81c784; /* Lighter greenish shade that suits the dark background */
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+}
+
+/* Styling for the output iframe */
+h2 {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #555;
+  margin-top: 20px;
+  background-color: #1e1e1e; /* Match body background */
+  color: white;
+  border-radius: 0 0 5px 5px; /* Match rounded corners */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-conntents ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-conntents ul li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .nav-conntents button {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .editor-container {
+    flex-direction: column;
+  }
+
+  iframe {
+    height: 250px;
+  }
+}

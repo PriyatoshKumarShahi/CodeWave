@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #16222a, #3a6073); }
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  /* background-color: white; */
+  color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  transform: translateY(-100%);
+  animation: slideDown 1s forwards;
+}
+.form-container:hover{
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideDown {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: rgb(207, 205, 205);
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  border: 1px solid #4DB6AC;
+  color: white;
+
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+.sign-up-register{
+  text-decoration: none;
+  margin-top: -35px;
+  margin-left: 90px;
+  color: rgb(238, 238, 245);
+}
+.sign-up-register a{
+  text-decoration: none;
+  color: rgb(238, 238, 245);
+  color: rgb(180, 180, 226);
+  font-weight: 600;
+
+}
+.sign-in-register{
+  text-decoration: none;
+  margin-top: -35px;
+  margin-left: 200px;
+}
+.sign-in-register a{
+  text-decoration: none;
+  color: white;
+  color: rgb(180, 180, 226);
+  font-weight: 600;
+
+
+
+}
+#calculate-btn {
+  padding: 10px 20px; /* Increased button size */
+  background-color: #28a7a1;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+
+}
+#calculate-btn:hover {
+  background-color: #0b796f;
+  transform: scale(1);
+}
+#togglePassword{
+  font-size: 17px;
+  background-color: white;
+  border: 1px solid black;
+  }
+#toggleSignUpPassword{
+  font-size: 17px;
+  background-color: white;
+  border: 1px solid black;
+  }
