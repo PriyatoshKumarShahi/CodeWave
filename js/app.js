@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Attach auto-complete event for each editor
   Object.keys(editors).forEach(language => {
-    editors[language].on("inputRead", function(editor) {
+    editors[language].on("inputRead", function (editor) {
       if (language === 'html') {
         CodeMirror.commands.autocomplete(editor); // HTML uses XML hint
       } else if (language === 'css') {
@@ -48,6 +48,42 @@ document.addEventListener('DOMContentLoaded', function () {
         editor.showHint({ hint: CodeMirror.hint.javascript });
       }
     });
+  });
+
+  // Function to copy code from the specified editor
+  function copyCode(language) {
+    let editorContent;
+    if (language === 'html') {
+      editorContent = editors.html.getValue();
+    } else if (language === 'css') {
+      editorContent = editors.css.getValue();
+    } else if (language === 'js') {
+      editorContent = editors.javascript.getValue();
+    }
+
+    // Create a temporary textarea to hold the code for copying
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = editorContent;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextArea);
+
+    // Notify the user that the code was copied
+    alert(`${language.toUpperCase()} code copied to clipboard!`);
+  }
+
+  // Add event listeners to the copy buttons
+  document.getElementById('copy-html').addEventListener('click', function () {
+    copyCode('html');
+  });
+
+  document.getElementById('copy-css').addEventListener('click', function () {
+    copyCode('css');
+  });
+
+  document.getElementById('copy-js').addEventListener('click', function () {
+    copyCode('js');
   });
 
   // Function to update the iframe with HTML, CSS, JS code
@@ -69,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const jsCode = `<script>${editors.javascript ? editors.javascript.getValue() : ''}<\/script>`;
 
     const output = document.getElementById('output');
-    
+
     // Combine and inject HTML, CSS, and JS into iframe
     output.srcdoc = htmlCode + cssCode + jsCode;
   }

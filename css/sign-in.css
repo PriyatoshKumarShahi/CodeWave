@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #16222a, #3a6073); }
+  background: linear-gradient(to right, #16222a, #101010); }
 
 .form-container {
   width: 100%;
@@ -60,7 +60,9 @@ input, textarea {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
   border: 1px solid #4DB6AC;
-  color: white;
+  color: rgb(200, 200, 200);
+  font-weight: 600;
+  font-size: 15px;
 
 }
 

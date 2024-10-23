@@ -255,7 +255,7 @@ color: white;
   padding: 20px;
   background: rgba(75, 147, 195, 0.1);
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease , box-shadow 0.4s ease;
 }
 
 .feature h3 {
@@ -264,6 +264,7 @@ color: white;
 
 .feature:hover {
   transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(161, 161, 161, 0.7);
 }
 
 /* Multiple Languages Section */

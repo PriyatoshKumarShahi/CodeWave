@@ -116,6 +116,8 @@ nav {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
   transition: box-shadow 0.4s ease;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .editor-section:hover {
@@ -141,7 +143,74 @@ textarea {
   font-family: 'Courier New', Courier, monospace;
   border-radius: 0 0 5px 5px; 
   resize: none; 
+
 }
+
+
+
+/* Style for the button */
+.copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+
+/* Hover effect for the button */
+.copy-btn:hover {
+  background-color: #555;
+}
+
+/* Tooltip text on hover */
+.copy-btn::after {
+  content: 'Copy';
+  position: absolute;
+  top: -30px; /* Adjust this value to move the tooltip */
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #555;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  pointer-events: none;
+}
+
+/* Show tooltip on hover */
+.copy-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+.copy-btn i {
+  pointer-events: none; /* Disable pointer events on the icon */
+  margin-right: 5px;
+  color: rgb(132, 131, 131);
+}
+
 
 /* Main heading styling */
 .main-heading {
