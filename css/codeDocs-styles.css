@@ -1,0 +1,59 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to bottom right, #333333, #8e44ad); */
+  background: linear-gradient(to bottom right, #001f3f, #5f27cd);
+  color: #333; /* Text color */
+}
+
+
+
+.container {
+  display: flex; /* Flexbox layout */
+}
+
+.sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  padding: 20px; /* Padding for sidebar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+  margin-right: 20px; /* Space between sidebar and main content */
+  height: 80vh;
+}
+
+.sidebar h3 {
+  margin-top: 0; /* Remove top margin */
+}
+
+.sidebar ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+.sidebar li {
+  margin: 5px 0; /* Space between sidebar items */
+}
+
+.sidebar a {
+  text-decoration: none; /* Remove underline */
+  color: #c6c5c5; /* Link color */
+  transition: color 0.3s , background-color 0.3s ease; /* Transition effect */
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.sidebar a:hover {
+  color: #f0efef; /* Darker shade on hover */
+  background-color: gray;
+}
+.sidebar h3{
+font-size: 20px;
+}
+.sidebar h3 i{
+font-size: 20px;
+color: blueviolet;
+}
+

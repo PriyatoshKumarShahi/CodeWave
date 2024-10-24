@@ -1,0 +1,40 @@
+.homeSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homeSection img{
+  margin-top: 100px;
+  height: 200px;
+}
+.homeSection h1{
+ font-size: 60px;
+ width:900px;
+ margin:0 0 0 120px;
+}
+.homeSection p{
+ font-size: 30px;
+ width:900px;
+ margin:0 0 0 120px;
+ color: gray;
+}
+.homeSection a button{
+ font-size: 20px;
+ color: white;
+ background-color: #712cf9;
+ padding: 15px 20px;
+ border: none;
+border-radius: 10px;
+cursor: pointer;
+margin-top: 20px;
+transition: background-color 0.3s ease;
+}
+.homeSection a button:hover{
+
+ background-color: #6114fb;
+ 
+}
+.homeSection a button i{
+  margin-right: 10px;
+}
