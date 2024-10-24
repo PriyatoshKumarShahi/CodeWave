@@ -208,6 +208,41 @@ textarea {
 
 }
 
+#dropzone {
+  border: 2px dashed #4caf50;
+  border-radius: 5px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: #4caf50;
+  display: none; /* Hidden by default, will appear on drag */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000; /* Makes sure it appears above other content */
+}
+
+#dropzone.dragover {
+  border-color: #ff5722;
+  color: #ff5722;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Style for the button */

@@ -57,6 +57,9 @@
 
     <h1 class="main-heading">Code Editor</h1>
     
+    <div id="dropzone">
+        <p>Drag and Drop your HTML, CSS, or JS files here</p>
+      </div>
     
     <div class="editor-container">
         <div class="editor-section">
@@ -94,6 +97,7 @@
         </div>
     </div>
     <button id="clear-code">Clear Code</button>
+    <!-- <button id="save-code" class="save-btn">Save Code</button> -->
 
     <h2>Output:</h2>
     <iframe id="output"></iframe>
@@ -101,7 +105,7 @@
     <!-- Link to the updated app.js file -->
     <script src="/js/app.js"></script>
 
-    <script>
+    <!-- <script>
         document.getElementById('clear-code').addEventListener('click', function() {
           localStorage.removeItem('htmlCode');
           localStorage.removeItem('cssCode');
@@ -111,7 +115,7 @@
           editors.javascript.setValue('');
           updateOutput(); // Update the iframe after clearing
         });
-      </script>
+      </script> -->
 
    
 </body>

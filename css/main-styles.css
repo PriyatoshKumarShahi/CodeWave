@@ -8,7 +8,8 @@
 body {
   font-family: 'Arial', sans-serif;
   /* Add gradient background */
-  background: linear-gradient(135deg, #1e1e1e, #0a0a0a);
+  /* background: linear-gradient(135deg, #1e1e1e, #0a0a0a); */
+  background-color: #0D1117;
   color: #dcdcdc;
   line-height: 1.6;
   min-height: 100vh;
