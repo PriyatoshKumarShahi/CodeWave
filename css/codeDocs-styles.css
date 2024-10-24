@@ -1,37 +1,103 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* background: linear-gradient(to bottom right, #333333, #8e44ad); */
-  background: linear-gradient(to bottom right, #001f3f, #5f27cd);
   color: #333; /* Text color */
 }
 
-
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
 .container {
   display: flex; /* Flexbox layout */
 }
 
 .sidebar {
-  width: 250px; /* Fixed width for sidebar */
-  padding: 20px; /* Padding for sidebar */
+  width: 330px; /* Fixed width for sidebar */
+  padding: 20px 100px 20px 30px; /* Increased left padding */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 8px; /* Rounded corners */
   margin-right: 20px; /* Space between sidebar and main content */
-  height: 80vh;
+  height: 80vh; /* Height of sidebar */
+  margin-top: 60px; /* Space below the navbar */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
+
+
+
+
+
+
+.sidebar::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track (background) */
+  border-radius: 10px; /* Rounded corners for track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for thumb */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb when hovered */
+}
+
+/* Custom scrollbar styles for Firefox */
+.sidebar {
+   /* Makes the scrollbar thin */
+  scrollbar-color: #696868 #414141; /* scrollbar thumb color and track color */
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sidebar h3 {
   margin-top: 0; /* Remove top margin */
-}
+  font-size: 25px; /* Sidebar heading font size */
+margin-right: -80px;}
 
 .sidebar ul {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
+  margin-left: 20px; /* Margin to shift content to the right */
 }
 
+.sidebar ul p {
+  color: rgb(162, 162, 162);
+  font-size: 25px;
+  width: 300px; /* You may want to adjust this if needed */
+  margin: 20px 0 -5px 10px;
+}
+
+.sidebar ul p i {
+  color: #c0a4f9;
+}
+.sidebar ul li{
+  width: 120px;
+}
 .sidebar li {
   margin: 5px 0; /* Space between sidebar items */
 }
@@ -39,21 +105,25 @@ body {
 .sidebar a {
   text-decoration: none; /* Remove underline */
   color: #c6c5c5; /* Link color */
-  transition: color 0.3s , background-color 0.3s ease; /* Transition effect */
+  transition: color 0.3s, background-color 0.3s ease; /* Transition effect */
   font-size: 20px;
   padding: 5px 10px;
   border-radius: 5px;
+  display: block; /* Ensure links occupy full width */
 }
 
 .sidebar a:hover {
   color: #f0efef; /* Darker shade on hover */
-  background-color: gray;
-}
-.sidebar h3{
-font-size: 20px;
-}
-.sidebar h3 i{
-font-size: 20px;
-color: blueviolet;
+  background-color: gray; /* Background color on hover */
 }
 
+.sidebar h3 {
+  font-size: 25px; /* Sidebar heading font size */
+  margin-left: 10px; /* Margin for the heading */
+  width: 250px; /* Width for the heading */
+}
+
+.sidebar h3 i {
+  font-size: 20px; /* Icon size */
+  color: blueviolet; /* Icon color */
+}
