@@ -100,6 +100,68 @@ nav {
   color: white;
 }
 
+
+/* Default dark mode styles (default mode) */
+#clear-code {
+  background-color: rgb(174, 174, 252);
+  color: #0f0e0e;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: relative; /* Needed to position the :after element */
+  font-weight: 510;
+}
+
+#clear-code:hover {
+  background-color: rgb(132, 145, 247);
+}
+
+/* The text that will appear when hovering */
+#clear-code:after {
+  content: "Clear Code"; /* Text to display */
+  position: absolute;
+  bottom: 35px; /* Position it below the button */
+  left: 52%;
+  transform: translateX(-50%);
+  background-color: #080808;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 5px;
+  font-size: 16px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden; /* Hide initially */
+  /* transition-delay: 0.5s;  */
+}
+
+/* Show tooltip on hover with delay */
+#clear-code:hover:after {
+  opacity: 1;
+  visibility: visible; 
+  transition-delay: 0.3s; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Code editor container */
 .editor-container {
   display: flex;
@@ -176,18 +238,19 @@ textarea {
 .copy-btn::after {
   content: 'Copy';
   position: absolute;
-  top: -30px; /* Adjust this value to move the tooltip */
+  top: 33px; /* Adjust this value to move the tooltip */
   right: 50%;
   transform: translateX(50%);
-  background-color: #555;
+  background-color: #100f0f;
   color: #fff;
-  padding: 5px 10px;
-  border-radius: 3px;
-  font-size: 12px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 16px;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
+  transition-delay: 0.3s;
   pointer-events: none;
 }
 

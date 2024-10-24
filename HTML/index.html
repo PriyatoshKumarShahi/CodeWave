@@ -51,6 +51,8 @@
                 <button><a href="sign-up.html">Register</a></button>
             </ul>
         </div>
+
+     
     </nav>
 
     <h1 class="main-heading">Code Editor</h1>
@@ -68,6 +70,7 @@
 
 
 
+
         </div>
         <div class="editor-section">
             <h3>CSS</h3>
@@ -76,6 +79,7 @@
                 <i class="fa-regular fa-copy"></i>                
                 Copy Code
             </button>
+
 
 
         </div>
@@ -87,16 +91,27 @@
                 
                 Copy Code
             </button>
-
-
         </div>
     </div>
+    <button id="clear-code">Clear Code</button>
 
     <h2>Output:</h2>
     <iframe id="output"></iframe>
 
     <!-- Link to the updated app.js file -->
     <script src="/js/app.js"></script>
+
+    <script>
+        document.getElementById('clear-code').addEventListener('click', function() {
+          localStorage.removeItem('htmlCode');
+          localStorage.removeItem('cssCode');
+          localStorage.removeItem('jsCode');
+          editors.html.setValue('');
+          editors.css.setValue('');
+          editors.javascript.setValue('');
+          updateOutput(); // Update the iframe after clearing
+        });
+      </script>
 
    
 </body>
