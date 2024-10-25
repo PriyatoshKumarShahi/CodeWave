@@ -1,91 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/main-styles.css" />
-  <link rel="stylesheet" href="/css/codeDocs-styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <title>CodeWave - Docs</title>
- 
-</head>
-<body>
-  <nav>
-    <div class="logo">
-      <img
-        src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png"
-        alt="CodeWave Logo"
-        height="60px"
-        style="border-radius: 50%"
-      />
-      <p>CodeWave</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main-styles.css" />
+    <link rel="stylesheet" href="/css/codeDocs-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>CodeWave - Docs</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png"
+          alt="CodeWave Logo"
+          height="60px"
+          style="border-radius: 50%"
+        />
+        <p>CodeWave</p>
+      </div>
+      <div class="nav-conntents">
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="codeDocs.html">Docs</a></li>
+
+          <li><a href="">Icons</a></li>
+          <li><a href="index.html">Start Coding</a></li>
+          <button><a href="sign-in.html">Login</a></button>
+          <button><a href="sign-up.html">Register</a></button>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h3 style="margin-left: 30px">
+          <i class="fa-solid fa-book-open"></i> Getting Started
+        </h3>
+        <ul>
+          <li style="margin-bottom: -20px">
+            <a href="codeDocs.html">Introduction</a>
+          </li>
+          <p><i class="fa-brands fa-html5"></i> HTML Components:</p>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="divs.html">Div</a></li>
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="images.html">Images</a></li>
+          <li><a href="inputs.html">Inputs</a></li>
+          <li><a href="cards.html">Cards</a></li>
+          <li><a href="alerts.html">Alerts</a></li>
+          <li><a href="carousel.html">Carousel</a></li>
+          <li><a href="dropdowns.html">Dropdowns</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="placeholder.html">Placeholder</a></li>
+          <li><a href="spinners.html">Spinners</a></li>
+
+          <p>
+            <i style="margin-right: 5px" class="fa-brands fa-css3-alt"></i
+            >Customize
+          </p>
+          <li><a href="background.html">Background</a></li>
+          <li><a href="transitions.html">Transitions</a></li>
+          <li><a href="border.html">Border</a></li>
+          <li><a href="fonts.html">Fonts</a></li>
+          <li><a href="colors.html">Colors</a></li>
+          <li><a href="animation.html">Animations</a></li>
+          <li><a href="margin.html">Margins</a></li>
+          <li><a href="paddings.html">Paddings</a></li>
+          <li><a href="icons.html">Icons</a></li>
+          <li><a href="links.html">Links</a></li>
+          <li><a href="display.html">Display</a></li>
+          <li><a href="overflow.html">Overflow</a></li>
+        </ul>
+      </aside>
+      <div class="main-bar">
+        <div class="main-heading">
+          <h1>Get Started with CodeWave</h1>
+          <p>
+            CodeWave is a powerful, feature-packed frontend toolkit. Build
+            anything—from prototype to production—in minutes.
+          </p>
+        </div>
+        <div class="firstCard">
+          <div class="cardHeading">
+            <h2>Quick Start</h2>
+            <p>Get started with basic CodeWave HTML snippet!!</p>          
+          </div>
+          <div class="cardContent">
+            <p>1. Create a new index.html file in your project root. Include the <meta name="viewport"> tag as well for </p>
+            <p style="margin-left: 24px;">proper responsive behavior in mobile devices.</p>
+          </div>
+          <div class="card">
+            <button class="copy-btn" onclick="copyCode()">
+              <i class="fas fa-copy"></i> 
+            </button>
+            <pre id="code-block">
+              <span class="html-tag">&lt;!doctype html&gt;</span>
+              <span class="html-tag">&lt;html</span> <span class="html-attr">lang</span>=<span class="html-value">"en"</span><span class="html-tag">&gt;</span>
+              <span class="html-tag">&lt;head&gt;</span>
+              <span class="html-tag">&lt;meta</span> <span class="html-attr">charset</span>=<span class="html-value">"utf-8"</span><span class="html-tag">&gt;</span>
+              <span class="html-tag">&lt;meta</span> <span class="html-attr">name</span>=<span class="html-value">"viewport"</span> <span class="html-attr">content</span>=<span class="html-value">"width=device-width, initial-scale=1"</span><span class="html-tag">&gt;</span>
+              <span class="html-tag">&lt;title&gt;</span>Bootstrap demo<span class="html-tag">&lt;/title&gt;</span>
+              <span class="html-tag">&lt;/head&gt;</span>
+              <span class="html-tag">&lt;body&gt;</span>
+              <span class="html-tag">&lt;h1&gt;</span>Hello, world!<span class="html-tag">&lt;/h1&gt;</span>
+              <span class="html-tag">&lt;/body&gt;</span>
+              <span class="html-tag">&lt;/html&gt;</span>
+            </pre>
+            
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="nav-conntents">
-      <ul>
-        <li><a href="main.html">Home</a></li>
-        <li><a href="codeDocs.html">Docs</a></li>
-
-        <li><a href="">Icons</a></li>
-        <li><a href="index.html">Start Coding</a></li>
-        <button><a href="sign-in.html">Login</a></button>
-        <button><a href="sign-up.html">Register</a></button>
-      </ul>
-    </div>
-
-  
-  </nav>
-
-  <div class="container">
-    <aside class="sidebar">
-      <h3 style="margin-left: 30px;"> <i class="fa-solid fa-book-open"></i> Getting Started</h3>
-      <ul>
-
-        
-        <li style="margin-bottom: -20px;"><a href="codeDocs.html">Introduction</a></li>
-        <p><i class="fa-brands fa-html5"></i> HTML Components:</p>
-        <li><a href="forms.html">Forms</a></li>
-        <li><a href="tables.html">Tables</a></li>
-        <li><a href="divs.html">Div</a></li>
-        <li><a href="buttons.html">Buttons</a></li>
-        <li><a href="images.html">Images</a></li>
-        <li><a href="inputs.html">Inputs</a></li>     
-        <li><a href="cards.html">Cards</a></li>
-        <li><a href="alerts.html">Alerts</a></li>
-        <li><a href="carousel.html">Carousel</a></li>
-        <li><a href="dropdowns.html">Dropdowns</a></li>
-        <li><a href="navbar.html">Navbar</a></li>
-        <li><a href="placeholder.html">Placeholder</a></li>
-        <li><a href="spinners.html">Spinners</a></li>
-
-
-        
-
-        <p><i style="margin-right: 5px;" class="fa-brands fa-css3-alt"></i>Customize</p>
-        <li><a href="background.html">Background</a></li>
-        <li><a href="transitions.html">Transitions</a></li>
-        <li><a href="border.html">Border</a></li>
-        <li><a href="fonts.html">Fonts</a></li>
-        <li><a href="colors.html">Colors</a></li>
-        <li><a href="animation.html">Animations</a></li>     
-        <li><a href="margin.html">Margins</a></li>
-        <li><a href="paddings.html">Paddings</a></li>
-        <li><a href="icons.html">Icons</a></li>
-        <li><a href="links.html">Links</a></li>
-        <li><a href="display.html">Display</a></li>
-        <li><a href="overflow.html">Overflow</a></li>
 
 
 
+    <script>
+ function copyCode() {
+        // Select the text in the pre element
+        var codeBlock = document.getElementById("code-block").innerText;
 
-      </ul>
-     
-    </aside>
-   <div class="main-bar">
+        // Create a temporary textarea to copy the text
+        var tempTextArea = document.createElement("textarea");
+        tempTextArea.value = codeBlock;
+        document.body.appendChild(tempTextArea);
 
-   </div>
-  
-    
-  </div>
+        // Select and copy the text from the textarea
+        tempTextArea.select();
+        document.execCommand("copy");
 
-</body>
+        // Remove the temporary textarea
+        document.body.removeChild(tempTextArea);
+
+        // Optional: Alert user about successful copy
+        alert("Code copied to clipboard!");
+      }
+            
+    </script>
+  </body>
 </html>
