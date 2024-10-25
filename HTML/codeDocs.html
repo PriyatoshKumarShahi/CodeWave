@@ -80,7 +80,7 @@
       <div class="main-bar">
         <div class="main-heading">
           <h1>Get Started with CodeWave</h1>
-          <p>
+          <p style="margin-left: 1px;">
             CodeWave is a powerful, feature-packed frontend toolkit. Build
             anything—from prototype to production—in minutes.
           </p>
@@ -104,7 +104,7 @@
               <span class="html-tag">&lt;head&gt;</span>
               <span class="html-tag">&lt;meta</span> <span class="html-attr">charset</span>=<span class="html-value">"utf-8"</span><span class="html-tag">&gt;</span>
               <span class="html-tag">&lt;meta</span> <span class="html-attr">name</span>=<span class="html-value">"viewport"</span> <span class="html-attr">content</span>=<span class="html-value">"width=device-width, initial-scale=1"</span><span class="html-tag">&gt;</span>
-              <span class="html-tag">&lt;title&gt;</span>Bootstrap demo<span class="html-tag">&lt;/title&gt;</span>
+              <span class="html-tag">&lt;title&gt;</span>CodeWave demo<span class="html-tag">&lt;/title&gt;</span>
               <span class="html-tag">&lt;/head&gt;</span>
               <span class="html-tag">&lt;body&gt;</span>
               <span class="html-tag">&lt;h1&gt;</span>Hello, world!<span class="html-tag">&lt;/h1&gt;</span>
@@ -114,9 +114,78 @@
             
           </div>
         </div>
-      </div>
-    </div>
+        <div class="secondCard">
+          <div class="cardHeading">
+            <h2>Viewport Meta</h2>
+            <p>CodeWave is developed mobile first, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your <head>.</p>          
+          </div>
+          
+          <div class="card">
+            <button class="copy-btn" onclick="copyCode()">
+              <i class="fas fa-copy"></i> 
+            </button>
+            <pre id="card-block">
+              <span class="html-tag">&lt;meta</span> <span class="html-attr">name</span>=<span class="html-value">"viewport"</span> <span class="html-attr">content</span>=<span class="html-value">"width=device-width, initial-scale=1"</span><span class="html-tag">&gt;</span>              </pre>
+                          </pre>
+            
+          </div>
+        </div>
+        <div class="thirdCard">
 
+        
+        <div class="cardHeading">
+          <h2>JS Components</h2>
+          <p>Curious which components explicitly require our JavaScript and Popper? If you’re at all unsure about the general page structure, keep reading for an example page template.</p>          
+        </div>
+        <div class="js-para">
+          <p>• Alerts for dismissing</p>
+          <p>• Buttons for toggling states and checkbox/radio functionality</p>
+          <p>• Carousel for all slide behaviors, controls, and indicators
+          </p>
+          <p>• Collapse for toggling visibility of content
+          </p>
+          <p>• Dropdowns for displaying and positioning </p>
+          <p>• Modals for displaying, positioning, and scroll behavior</p>
+          <p>• Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors</p>
+          <p>• Navs with the Tab plugin for toggling content panes</p>
+          <p>• Offcanvases for displaying, positioning, and scroll behavior
+          </p>
+          <p>• Scrollspy for scroll behavior and navigation updates
+          </p>
+        </div>
+      </div>
+      <div class="fourthCard">
+        <div class="cardHeading">
+          <h2>Box-Sizing</h2>
+          <p>For more straightforward sizing in CSS, we switch the global box-sizing value from content-box to border-box. This ensures padding does not affect the final computed width of an element, but it can cause problems with some third-party software like Google Maps and Google Custom Search Engine.</p>          
+        </div>
+        <div class="card">
+          <button class="copy-btn" onclick="copyCode()">
+            <i class="fas fa-copy"></i> 
+          </button>
+          <pre id="card-block">
+           <span style="color:rgb(211, 115, 115) ; margin-top: -50px;"> .selector-for-some-widget {</span>
+             <span style="color: rgb(244, 8, 244);"> box-sizing: content-box;</span>
+          <span style="color: rgb(211, 115, 115);">}</span>
+            </pre>
+            
+          
+        </div>
+     <p style="margin: 40px 0 0 ; font-size: 20px; color: rgb(192, 189, 189);width: 900px;">With the above snippet, nested elements—including generated content via <span style="color: rgb(220, 38, 220); margin-left: 5px;">::before</span> and <span style="color: rgb(220, 38, 220); margin-left: 5px;">::after</span>—will all inherit the specified box-sizing for that .selector-for-some-widget.
+
+     </p>
+      </div>
+
+     
+      </div>
+   
+    </div>
+    <footer class="footer">
+    <div class="first-footer">
+      <img src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png" alt="" height="50px" style="border-radius: 50px; margin-right: 5px;"><p>CodeWave</p>
+    </div>
+    <p >&copy; 2024 | All Rights Reserved | Designed and built with all the love in the world by the Priyatosh Kumar</p>
+     </footer>
 
 
     <script>
