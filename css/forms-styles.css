@@ -1,0 +1,222 @@
+.sidebar {
+  width: 330px;
+  padding: 20px 100px 20px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-right: 20px;
+  height: calc(100vh - 20px); /* Makes the sidebar full height minus a small margin */
+  margin-top: 20px; /* Adds space below the navbar */
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: sticky;
+  top: 20px; /* Sidebar sticks 20px from the top */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Custom scrollbar styles for Firefox */
+.sidebar {
+  scrollbar-color: #696868 #414141;
+  scroll-behavior: smooth;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 25px;
+  margin-right: -80px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+.sidebar ul p {
+  color: rgb(162, 162, 162);
+  font-size: 25px;
+  width: 300px;
+  margin: 20px 0 -5px 10px;
+}
+
+.sidebar ul p i {
+  color: #c0a4f9;
+}
+
+.sidebar ul li {
+  width: 120px;
+}
+
+.sidebar li {
+  margin: 5px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #c6c5c5;
+  transition: color 0.3s, background-color 0.3s ease;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.sidebar a:hover {
+  color: #f0efef;
+  background-color: gray;
+}
+
+.sidebar h3 {
+  font-size: 25px;
+  margin-left: 10px;
+  width: 250px;
+}
+
+.sidebar h3 i {
+  font-size: 20px;
+  color: blueviolet;
+}
+.container{
+  display: flex;
+  /* flex-direction: column; */
+}
+.main-bar{
+  max-width: 900px;
+}
+.main-heading {
+  font-size: 25px;
+  flex-direction: column;
+  left: 0;
+}
+.main-heading h1{
+margin-left: -700px;
+}
+.main-heading p{
+  margin-left: 25px;
+  margin-top: -10px;
+  color: rgb(179, 178, 178);
+}
+.firstCard{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+.c1{
+  width: 400px;
+  font-size: 18px;
+}
+.c1 h2{
+ margin-left: -250px;
+ color: rgb(110, 168, 254);
+}
+.c1 p{
+  margin-top: -10px;
+  color: rgb(121, 121, 121);
+}
+.c2{
+  width: 400px;
+  font-size: 18px;
+  margin-left: 30px;
+}
+.c2 h2{
+ margin-left: -215px;
+ color: rgb(110, 168, 254);
+}
+.c2 p{
+  margin-top: -10px;
+  color: rgb(121, 121, 121);
+}
+.c3{
+  width: 400px;
+  font-size: 18px;
+}
+.c3 h2{
+ margin-left: -260px;
+ color: rgb(110, 168, 254);
+}
+.c3 p{
+  margin-top: -10px;
+  color: rgb(121, 121, 121);
+}
+.c4{
+  width: 400px;
+  font-size: 18px;
+  margin-left: 30px;
+
+}
+.c4 h2{
+ margin-left: -320px;
+ color: rgb(110, 168, 254);
+}
+.c4 p{
+  margin-top: -10px;
+  color: rgb(121, 121, 121);
+}
+.c5{
+  width: 400px;
+  font-size: 18px;
+}
+.c5 h2{
+ margin-left: -330px;
+ color: rgb(110, 168, 254);
+}
+.c5 p{
+  margin-top: -10px;
+  color: rgb(121, 121, 121);
+}
+.c6{
+  width: 400px;
+  font-size: 18px;
+  margin-left: 30px;
+
+}
+.c6 h2{
+ margin-left: -330px;
+ color: rgb(110, 168, 254);
+}
+.c6 p{
+  margin-top: -10px;
+  color: rgb(121, 121, 121);
+}
+.c7{
+  width: 400px;
+  font-size: 18px;
+}
+.c7 h2{
+ margin-left: -230px;
+ color: rgb(110, 168, 254);
+}
+.c7 p{
+  margin-top: -10px;
+  color: rgb(121, 121, 121);
+}
+.c8{
+  width: 400px;
+  font-size: 18px;
+  margin-left: 30px;
+
+}
+.c8 h2{
+ margin-left: -290px;
+ color: rgb(110, 168, 254);
+}
+.c8 p{
+  margin-top: -10px;
+  color: rgb(121, 121, 121);
+}
