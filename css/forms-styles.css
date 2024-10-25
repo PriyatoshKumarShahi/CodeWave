@@ -220,3 +220,190 @@ margin-left: -700px;
   margin-top: -10px;
   color: rgb(121, 121, 121);
 }
+.secondCard{
+  margin-top: 80px;
+  margin-left: 20px;
+}
+.heading h1{
+  font-size: 30px;
+}
+.heading{
+  width: 900px;
+}
+.heading p{
+  font-size: 18px;
+  color: rgb(157, 156, 156);
+  margin-top: 10px;
+}
+form {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Slight shadow for depth */
+}
+.mb-3{
+  display: flex;
+  flex-direction: column;
+}
+/* Labels */
+.form-label {
+  color: #787777; /* Slightly brighter for better visibility */
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+/* Input fields */
+.form-control {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #3b3b3b;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-control:focus {
+  background-color: #333333;
+  border-color: #5e9dff; /* Light blue on focus */
+  box-shadow: 0 0 8px rgba(94, 157, 255, 0.4);
+  outline: none;
+}
+
+/* Help text */
+.form-text {
+  color: #8c8c8c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Checkbox */
+.form-check-input {
+  background-color: #444444;
+  border: 1px solid #5c5c5c;
+  border-radius: 3px;
+}
+
+.form-check-input:checked {
+  background-color: #5e9dff;
+  border-color: #5e9dff;
+}
+
+.form-check-label {
+  color: #7a7979;
+  margin-left: 5px;
+}
+
+/* Submit Button */
+.btn-primary {
+  background-color: #5e9dff;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.1s;
+  margin-top: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #4a8de6;
+  transform: translateY(-2px); /* Small lift on hover */
+  box-shadow: 0 4px 10px rgba(94, 157, 255, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(1px); /* Pressed-down effect */
+  background-color: #3a7ccc;
+}
+.form-eg{
+  margin-top: 50px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.form-code {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #f8f8f2;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  margin-top: 20px;
+  border: 1px solid rgb(252, 250, 250);
+}
+
+.form-code .tag {
+  color: #ff79c6; /* Pink for tags */
+}
+
+.form-code .attribute {
+  color: #8be9fd; /* Light blue for attributes */
+}
+
+.form-code .text {
+  color: #f1fa8c; /* Yellow for attribute values */
+}
+
+.form-code code {
+  color: #f8f8f2;
+}
+
+.form-code pre {
+  margin: 0;
+}
+
+code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.copy-btn {
+  position: absolute;
+  background-color: transparent;
+  color: rgb(129, 129, 129);
+  border: none;
+  top: 0;
+  right: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 23px;
+  transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: #4b4b4b;
+  color: white;
+}
+
+.copy-btn::after {
+  content: "Copy to clipboard";
+  position: absolute;
+  top: -35px;
+  right: 0;
+  background-color: gray;
+  color: rgb(236, 234, 234);
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.copy-btn:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.info-form-h2{
+  margin-left: -440px;
+  margin-bottom: -20px;
+}
+.info-form-h2 h2{
+  color: #838282;
+
+}

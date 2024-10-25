@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeWave - Forms</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/forms-styles.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <img
+            src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png"
+            alt="CodeWave Logo"
+            height="60"
+            style="border-radius: 50%"
+        />
+        <p>CodeWave</p>
+    </div>
+    <div class="nav-conntents">
+        <ul>
+            <li><a href="../main.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="../codeDocs.html">Docs</a></li>
+            <li><a href="../index.html">Start Coding</a></li>
+            <button><a href="../sign-in.html">Login</a></button>
+            <button><a href="../sign-up.html">Register</a></button>
+        </ul>
+    </div>
+
+ 
+</nav>
+<div class="container">
+  <aside class="sidebar">
+    <h3 style="margin-left: 30px">
+      <i class="fa-solid fa-book-open"></i> Getting Started
+    </h3>
+    <ul>
+      <li style="margin-bottom: -20px">
+        <a href="codeDocs.html">Introduction</a>
+      </li>
+      <p><i class="fa-brands fa-html5"></i> HTML Components:</p>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="tables.html">Tables</a></li>
+      <li><a href="divs.html">Div</a></li>
+      <li><a href="buttons.html">Buttons</a></li>
+      <li><a href="images.html">Images</a></li>
+      <li><a href="inputs.html">Inputs</a></li>
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="alerts.html">Alerts</a></li>
+      <li><a href="carousel.html">Carousel</a></li>
+      <li><a href="dropdowns.html">Dropdowns</a></li>
+      <li><a href="navbar.html">Navbar</a></li>
+      <li><a href="placeholder.html">Placeholder</a></li>
+      <li><a href="spinners.html">Spinners</a></li>
+
+      <p>
+        <i style="margin-right: 5px" class="fa-brands fa-css3-alt"></i
+        >Customize
+      </p>
+      <li><a href="background.html">Background</a></li>
+      <li><a href="transitions.html">Transitions</a></li>
+      <li><a href="border.html">Border</a></li>
+      <li><a href="fonts.html">Fonts</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="animation.html">Animations</a></li>
+      <li><a href="margin.html">Margins</a></li>
+      <li><a href="paddings.html">Paddings</a></li>
+      <li><a href="icons.html">Icons</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="display.html">Display</a></li>
+      <li><a href="overflow.html">Overflow</a></li>
+    </ul>
+  </aside>
+  <div class="main-bar">
+    <div class="main-heading">
+      <h1>Forms</h1>
+      <p>Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.</p>
+    </div>
+    <div class="firstCard">
+     <div class="c1">
+      <h2>Form Control</h2>
+      <p>Style textual inputs and textareas with support for multiple states.</p>
+     </div>
+   
+     <div class="c2">
+      <h2>Checks & radios</h2>
+      <p>Use our custom radio buttons and checkboxes in forms for selecting input options.</p>
+     </div>
+   
+     <div class="c3">
+      <h2>Input Group</h2>
+      <p>Attach labels and buttons to your inputs for increased semantic value.</p>
+     </div>
+   
+     <div class="c4">
+      <h2>Layout</h2>
+      <p>Create inline, horizontal, or complex grid-based layouts with your forms.
+      </p>
+     </div>
+   
+     <div class="c5">
+      <h2>Select</h2>
+      <p>Improve browser default select elements with a custom initial appearance.</p>
+     </div>
+   
+     <div class="c6">
+      <h2>Range</h2>
+      <p>Replace browser default range inputs with our custom version.</p>
+     </div>
+   
+     <div class="c7">
+      <h2>Floating labels</h2>
+      <p>Create beautifully simple form labels that float over your input fields.</p>
+     </div>
+   
+     <div class="c8">
+      <h2>Validation</h2>
+      <p>Validate your forms with custom or native validation behaviors and styles.</p>
+     </div>
+   
+    </div>
+
+    <div class="secondCard">
+      <div class="heading">
+        <h1>Overview</h1>
+      <p>Be sure to use an appropriate type attribute on all inputs (e.g., email for email address or number for numerical information) to take advantage of newer input controls like email verification, number selection, and more.</p>
+    <p>Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading for documentation on required classes, form layout, and more.</p>
+    </div>
+    <div class="form-eg">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3" style="margin: 10px 0;">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check" style="margin-left: 20px;">
+          <input type="checkbox" class="form-check-input" style="margin-left: -829px;margin-bottom: -18px;" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="info-form-h2">
+      <h2>Copy this code to get the above output</h2>
+    </div>
+    <div class="form-code">
+      <button class="copy-btn" onclick="copyCode()">
+        <i class="fas fa-copy"></i> 
+      </button>
+      <pre><code>&lt;form&gt;
+        &lt;div class=&quot;mb-3&quot;&gt;
+          &lt;label for=&quot;<span class="attribute">exampleInputEmail1</span>&quot; class=&quot;<span class="attribute">form-label</span>&quot;&gt;<span class="tag">Email address</span>&lt;/label&gt;
+          &lt;input type=&quot;<span class="attribute">email</span>&quot; class=&quot;<span class="attribute">form-control</span>&quot; id=&quot;<span class="attribute">exampleInputEmail1</span>&quot; aria-describedby=&quot;<span class="attribute">emailHelp</span>&quot;&gt;
+          &lt;div id=&quot;<span class="attribute">emailHelp</span>&quot; class=&quot;<span class="attribute">form-text</span>&quot;&gt;<span class="text">We'll never share your email with anyone else.</span>&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;<span class="attribute">mb-3</span>&quot;&gt;
+          &lt;label for=&quot;<span class="attribute">exampleInputPassword1</span>&quot; class=&quot;<span class="attribute">form-label</span>&quot;&gt;<span class="tag">Password</span>&lt;/label&gt;
+          &lt;input type=&quot;<span class="attribute">password</span>&quot; class=&quot;<span class="attribute">form-control</span>&quot; id=&quot;<span class="attribute">exampleInputPassword1</span>&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;<span class="attribute">mb-3 form-check</span>&quot;&gt;
+          &lt;input type=&quot;<span class="attribute">checkbox</span>&quot; class=&quot;<span class="attribute">form-check-input</span>&quot; id=&quot;<span class="attribute">exampleCheck1</span>&quot;&gt;
+          &lt;label class=&quot;<span class="attribute">form-check-label</span>&quot; for=&quot;<span class="attribute">exampleCheck1</span>&quot;&gt;<span class="tag">Check me out</span>&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;<span class="attribute">submit</span>&quot; class=&quot;<span class="attribute">btn btn-primary</span>&quot;&gt;<span class="tag">Submit</span>&lt;/button&gt;
+      &lt;/form&gt;
+      </code></pre>
+    </div>
+    
+
+    </div>
+  </div>
+</div>
+<script>
+  function copyCode() {
+         // Select the text in the pre element
+         var codeBlock = document.getElementById("code-block").innerText;
+ 
+         // Create a temporary textarea to copy the text
+         var tempTextArea = document.createElement("textarea");
+         tempTextArea.value = codeBlock;
+         document.body.appendChild(tempTextArea);
+ 
+         // Select and copy the text from the textarea
+         tempTextArea.select();
+         document.execCommand("copy");
+ 
+         // Remove the temporary textarea
+         document.body.removeChild(tempTextArea);
+ 
+         // Optional: Alert user about successful copy
+         alert("Code copied to clipboard!");
+       }
+             
+     </script>
+</body>
+</html>
