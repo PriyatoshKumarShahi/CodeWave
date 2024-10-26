@@ -1,0 +1,53 @@
+/* Table container styling */
+.table {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border-collapse: collapse;
+}
+
+/* Table header styling */
+.table thead th {
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+/* Table row styling */
+.table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table tbody th,
+.table tbody td {
+  padding: 10px;
+}
+
+/* Adjust column widths */
+.table thead th:nth-child(1),
+.table tbody th[scope="row"] {
+  width: 10%;
+}
+.table thead th:nth-child(2),
+.table tbody td:nth-child(2) {
+  width: 30%;
+}
+.table thead th:nth-child(3),
+.table tbody td:nth-child(3) {
+  width: 30%;
+}
+.table thead th:nth-child(4),
+.table tbody td:nth-child(4) {
+  width: 30%;
+}
+.table-primary { background-color: #cce5ff; color: #004085; }
+  .table-secondary { background-color: #e2e3e5; color: #383d41; }
+  .table-success { background-color: #d4edda; color: #155724; }
+  .table-danger { background-color: #f8d7da; color: #721c24; }
+  .table-warning { background-color: #fff3cd; color: #856404; }
+  .table-info { background-color: #d1ecf1; color: #0c5460; }
+  .table-light { background-color: #fefefe; color: #818182; }
+  .table-dark { background-color: #d6d8d9; color: #1b1e21; }
+  .table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+  .table th, .table td { padding: 8px; border: 1px solid #dee2e6; text-align: center; }

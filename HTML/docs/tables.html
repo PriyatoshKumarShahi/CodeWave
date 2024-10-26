@@ -6,6 +6,8 @@
     <title>CodeWave - Tables</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/forms-styles.css" />
+    <link rel="stylesheet" href="/css/table-styles.css">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -76,130 +78,54 @@
         </ul>
       </aside>
       <div class="main-bar">
-        <div class="main-heading">
-          <h1>Tables</h1>
+        <div class="main-heading" >
+          <h1 style="margin-left: -680px;">Tables</h1>
           <p>
             Examples and usage guidelines for form control styles, layout
             options, and custom components for creating a wide variety of Tables.
           </p>
         </div>
-        <div class="firstCard">
-          <div class="c1">
-            <h2>Form Control</h2>
-            <p>
-              Style textual inputs and textareas with support for multiple
-              states.
-            </p>
-          </div>
-
-          <div class="c2">
-            <h2>Checks & radios</h2>
-            <p>
-              Use our custom radio buttons and checkboxes in Tables for selecting
-              input options.
-            </p>
-          </div>
-
-          <div class="c3">
-            <h2>Input Group</h2>
-            <p>
-              Attach labels and buttons to your inputs for increased semantic
-              value.
-            </p>
-          </div>
-
-          <div class="c4">
-            <h2>Layout</h2>
-            <p>
-              Create inline, horizontal, or complex grid-based layouts with your
-              Tables.
-            </p>
-          </div>
-
-          <div class="c5">
-            <h2>Select</h2>
-            <p>
-              Improve browser default select elements with a custom initial
-              appearance.
-            </p>
-          </div>
-
-          <div class="c6">
-            <h2>Range</h2>
-            <p>Replace browser default range inputs with our custom version.</p>
-          </div>
-
-          <div class="c7">
-            <h2>Floating labels</h2>
-            <p>
-              Create beautifully simple form labels that float over your input
-              fields.
-            </p>
-          </div>
-
-          <div class="c8">
-            <h2>Validation</h2>
-            <p>
-              Validate your Tables with custom or native validation behaviors and
-              styles.
-            </p>
-          </div>
-        </div>
+      
 
         <div class="secondCard">
           <div class="heading">
             <h1>Overview</h1>
             <p>
-              Be sure to use an appropriate type attribute on all inputs (e.g.,
-              email for email address or number for numerical information) to
-              take advantage of newer input controls like email verification,
-              number selection, and more.
-            </p>
+              Due to the widespread use of <span class="purple">< table>></span> elements across third-party widgets like calendars and date pickers, Bootstrap’s tables are opt-in. Add the base class <span class="purple">.table</span> to any <span class="purple"> < table></span>, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Bootstrap, meaning any nested tables can be styled independent from the parent.
             <p>
-              Here’s a quick example to demonstrate CodeWave’s form styles. Keep
-              reading for documentation on required classes, form layout, and
-              more.
+              Using the most basic table markup, here’s how <span class="purple">.table-</span>based tables look in Bootstrap.
             </p>
           </div>
           <div class="form-eg">
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-              <div class="mb-3" style="margin: 10px 0">
-                <label for="exampleInputPassword1" class="form-label"
-                  >Password</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                />
-              </div>
-              <div class="mb-3 form-check" style="margin-left: 20px">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  style="margin-left: -829px; margin-bottom: -18px"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Check me out</label
-                >
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div class="info-form-h2">
             <p>HTML Snippet</p>
@@ -208,143 +134,70 @@
             <button class="copy-btn" onclick="copyCode()">
               <i class="fas fa-copy"></i>
             </button>
-            <pre><code>&lt;form&gt;
-        &lt;div class=&quot;mb-3&quot;&gt;
-          &lt;label for=&quot;<span class="attribute">exampleInputEmail1</span>&quot; class=&quot;<span class="attribute">form-label</span>&quot;&gt;<span class="tag">Email address</span>&lt;/label&gt;
-          &lt;input type=&quot;<span class="attribute">email</span>&quot; class=&quot;<span class="attribute">form-control</span>&quot; id=&quot;<span class="attribute">exampleInputEmail1</span>&quot; aria-describedby=&quot;<span class="attribute">emailHelp</span>&quot;&gt;
-          &lt;div id=&quot;<span class="attribute">emailHelp</span>&quot; class=&quot;<span class="attribute">form-text</span>&quot;&gt;<span class="text">We'll never share your email with anyone else.</span>&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;<span class="attribute">mb-3</span>&quot;&gt;
-          &lt;label for=&quot;<span class="attribute">exampleInputPassword1</span>&quot; class=&quot;<span class="attribute">form-label</span>&quot;&gt;<span class="tag">Password</span>&lt;/label&gt;
-          &lt;input type=&quot;<span class="attribute">password</span>&quot; class=&quot;<span class="attribute">form-control</span>&quot; id=&quot;<span class="attribute">exampleInputPassword1</span>&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;<span class="attribute">mb-3 form-check</span>&quot;&gt;
-          &lt;input type=&quot;<span class="attribute">checkbox</span>&quot; class=&quot;<span class="attribute">form-check-input</span>&quot; id=&quot;<span class="attribute">exampleCheck1</span>&quot;&gt;
-          &lt;label class=&quot;<span class="attribute">form-check-label</span>&quot; for=&quot;<span class="attribute">exampleCheck1</span>&quot;&gt;<span class="tag">Check me out</span>&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;button type=&quot;<span class="attribute">submit</span>&quot; class=&quot;<span class="attribute">btn btn-primary</span>&quot;&gt;<span class="tag">Submit</span>&lt;/button&gt;
-      &lt;/form&gt;
-      </code></pre>
-          </div>
-        </div>
-        <div class="secondCard">
-          <div class="heading">
-            <h1>Disabled Tables</h1>
-            <p>
-              Add the disabled boolean attribute on an input to prevent user
-              interactions and make it appear lighter.
-            </p>
-          </div>
-          <div class="form-code">
-            <button
-              class="copy-btn"
-              onclick="copyCode()"
-              style="margin-top: -3px"
-            >
-              <i class="fas fa-copy"></i>
-            </button>
-            <pre><code style="color: #d73a49; max-width: 500px;">&lt;<span style="color: #49e162">input</span> <span style="color: #ac88ef">class</span>=<span style="color: #49e162">"form-control"</span> <span style="color: #9f78e7">id</span>=<span style="color: #09c5d6">"disabledInput"</span> <span style="color: #ac88ef">type</span>=<span style="color: #09c5d6">"text"</span> <span style="color: #ac88ef">placeholder</span>=<span style="color: #09c5d6">"Disabled input here..."</span> <span style="color: #ac88ef">disabled</span>&gt;</code></pre>
-          </div>
+            <pre style=" border-radius: 5px; overflow-x: auto;margin-left: -100px;">
 
-          <div class="form-eg2">
-            <form>
-              <fieldset disabled>
-                <legend>Disabled fieldset example</legend>
-                <div class="mb-3">
-                  <label for="disabledTextInput" class="form-label"
-                    >Disabled input</label
-                  >
-                  <input
-                    type="text"
-                    id="disabledTextInput"
-                    class="form-control"
-                    placeholder="Disabled input"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="disabledSelect" class="form-label"
-                    >Disabled select menu</label
-                  >
-                  <select id="disabledSelect" class="form-select">
-                    <option>Disabled select</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="disabledFieldsetCheck"
-                      disabled
-                    />
-                    <label class="form-check-label" for="disabledFieldsetCheck">
-                      Can't check this
-                    </label>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </fieldset>
-            </form>
-          </div>
-          <div class="info-form-h2">
-            <p>HTML Snippet</p>
-          </div>
-          <div class="form-code">
-            <button class="copy-btn" onclick="copyCode()">
-              <i class="fas fa-copy"></i>
-            </button>
-            <pre><code style="color: #d73a49; padding: -100px;margin-left: -20px;">&lt;<span style="color: #75d78c">form</span>&gt;
-              &lt;<span style="color: #75d78c ;">fieldset</span> <span style="color: #9f78e7">disabled</span>&gt;
-                &lt;<span style="color: #75d78c">legend</span>&gt;Disabled fieldset example&lt;/<span style="color: #75d78c">legend</span>&gt;
-                &lt;<span style="color: #75d78c">div</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"mb-3"</span>&gt;
-                  &lt;<span style="color: #75d78c">label</span> <span style="color: #9f78e7">for</span>=<span style="color: #659fe1">"disabledTextInput"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-label"</span>&gt;Disabled input&lt;/<span style="color: #75d78c">label</span>&gt;
-                  &lt;<span style="color: #75d78c">input</span> <span style="color: #9f78e7">type</span>=<span style="color: #659fe1">"text"</span> <span style="color: #9f78e7">id</span>=<span style="color: #659fe1">"disabledTextInput"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-control"</span> <span style="color: #9f78e7">placeholder</span>=<span style="color: #659fe1">"Disabled input"</span>&gt;
-                &lt;/<span style="color: #75d78c">div</span>&gt;
-                &lt;<span style="color: #75d78c">div</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"mb-3"</span>&gt;
-                  &lt;<span style="color: #75d78c">label</span> <span style="color: #9f78e7">for</span>=<span style="color: #659fe1">"disabledSelect"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-label"</span>&gt;Disabled select menu&lt;/<span style="color: #75d78c">label</span>&gt;
-                  &lt;<span style="color: #75d78c">select</span> <span style="color: #9f78e7">id</span>=<span style="color: #659fe1">"disabledSelect"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-select"</span>&gt;
-                    &lt;<span style="color: #75d78c">option</span>&gt;Disabled select&lt;/<span style="color: #75d78c">option</span>&gt;
-                  &lt;/<span style="color: #75d78c">select</span>&gt;
-                &lt;/<span style="color: #75d78c">div</span>&gt;
-                &lt;<span style="color: #75d78c">div</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"mb-3"</span>&gt;
-                  &lt;<span style="color: #75d78c">div</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-check"</span>&gt;
-                    &lt;<span style="color: #75d78c">input</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-check-input"</span> <span style="color: #9f78e7">type</span>=<span style="color: #659fe1">"checkbox"</span> <span style="color: #9f78e7">id</span>=<span style="color: #659fe1">"disabledFieldsetCheck"</span> <span style="color: #9f78e7">disabled</span>&gt;
-                    &lt;<span style="color: #75d78c">label</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-check-label"</span> <span style="color: #9f78e7">for</span>=<span style="color: #659fe1">"disabledFieldsetCheck"</span>&gt;
-                      Can't check this
-                    &lt;/<span style="color: #75d78c">label</span>&gt;
-                  &lt;/<span style="color: #75d78c">div</span>&gt;
-                &lt;/<span style="color: #75d78c">div</span>&gt;
-                &lt;<span style="color: #75d78c">button</span> <span style="color: #9f78e7">type</span>=<span style="color: #659fe1">"submit"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"btn btn-primary"</span>&gt;Submit&lt;/<span style="color: #75d78c">button</span>&gt;
-              &lt;/<span style="color: #75d78c">fieldset</span>&gt;
-            &lt;/<span style="color: #75d78c">form</span>&gt;
-            </code></pre>
+              <span style="color: #a8d0e6;">&lt;table</span> <span style="color: #f8a5c2;">class</span><span style="color: #ffffff;">="table"</span><span style="color: #a8d0e6;">&gt;</span>
+                <span style="color: #a8d0e6;">&lt;thead&gt;</span>
+                  <span style="color: #a8d0e6;">&lt;tr&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;th</span> <span style="color: #f8a5c2;">scope</span><span style="color: #ffffff;">="col"</span><span style="color: #a8d0e6;">&gt;</span>#<span style="color: #a8d0e6;">&lt;/th&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;th</span> <span style="color: #f8a5c2;">scope</span><span style="color: #ffffff;">="col"</span><span style="color: #a8d0e6;">&gt;</span>First<span style="color: #a8d0e6;">&lt;/th&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;th</span> <span style="color: #f8a5c2;">scope</span><span style="color: #ffffff;">="col"</span><span style="color: #a8d0e6;">&gt;</span>Last<span style="color: #a8d0e6;">&lt;/th&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;th</span> <span style="color: #f8a5c2;">scope</span><span style="color: #ffffff;">="col"</span><span style="color: #a8d0e6;">&gt;</span>Handle<span style="color: #a8d0e6;">&lt;/th&gt;</span>
+                  <span style="color: #a8d0e6;">&lt;/tr&gt;</span>
+                <span style="color: #a8d0e6;">&lt;/thead&gt;</span>
+                <span style="color: #a8d0e6;">&lt;tbody&gt;</span>
+                  <span style="color: #a8d0e6;">&lt;tr&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;th</span> <span style="color: #f8a5c2;">scope</span><span style="color: #ffffff;">="row"</span><span style="color: #a8d0e6;">&gt;</span>1<span style="color: #a8d0e6;">&lt;/th&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;td&gt;</span>Mark<span style="color: #a8d0e6;">&lt;/td&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;td&gt;</span>Otto<span style="color: #a8d0e6;">&lt;/td&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;td&gt;</span>@mdo<span style="color: #a8d0e6;">&lt;/td&gt;</span>
+                  <span style="color: #a8d0e6;">&lt;/tr&gt;</span>
+                  <span style="color: #a8d0e6;">&lt;tr&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;th</span> <span style="color: #f8a5c2;">scope</span><span style="color: #ffffff;">="row"</span><span style="color: #a8d0e6;">&gt;</span>2<span style="color: #a8d0e6;">&lt;/th&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;td&gt;</span>Jacob<span style="color: #a8d0e6;">&lt;/td&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;td&gt;</span>Thornton<span style="color: #a8d0e6;">&lt;/td&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;td&gt;</span>@fat<span style="color: #a8d0e6;">&lt;/td&gt;</span>
+                  <span style="color: #a8d0e6;">&lt;/tr&gt;</span>
+                  <span style="color: #a8d0e6;">&lt;tr&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;th</span> <span style="color: #f8a5c2;">scope</span><span style="color: #ffffff;">="row"</span><span style="color: #a8d0e6;">&gt;</span>3<span style="color: #a8d0e6;">&lt;/th&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;td</span> <span style="color: #f8a5c2;">colspan</span><span style="color: #ffffff;">="2"</span><span style="color: #a8d0e6;">&gt;</span>Larry the Bird<span style="color: #a8d0e6;">&lt;/td&gt;</span>
+                    <span style="color: #a8d0e6;">&lt;td&gt;</span>@twitter<span style="color: #a8d0e6;">&lt;/td&gt;</span>
+                  <span style="color: #a8d0e6;">&lt;/tr&gt;</span>
+                <span style="color: #a8d0e6;">&lt;/tbody&gt;</span>
+              <span style="color: #a8d0e6;">&lt;/table&gt;</span>
+              
+              </pre>
           </div>
         </div>
+        
         <div class="secondCard">
           <div   class="heading">
-            <h1>Accessibility</h1>
-            <div class="Tables-points">
-
-            <p>
-              Ensure that all form controls have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a < label > element, or—in the case of buttons—to include sufficiently descriptive text as part of the < button>...< button/> content.
-            </p>
-            <p>For situations where it’s not possible to include a visible < label> or appropriate text content, there are alternative ways of still providing an accessible name, such as:</p>
-            <div class="form-points">
-              <p style="margin-top: 10px;">• < label> elements hidden using the <span class="purple">.visually-hidden class</span></p>
-              <p>• Pointing to an existing element that can act as a label using <span class="purple">aria-labelledby</span></p>
-              <p>• Providing a <span class="purple">title</span> attribute</p>
-              <p style="margin-bottom: 10px;">• Explicitly setting the accessible name on an element using <span class="purple">aria-label</span></p>
-            </div>
-            <p>If none of these are present, assistive technologies may resort to using the placeholder attribute as a fallback for the accessible name on <span class="purple">< input></span> and <span class="purple">< textarea></span> elements. The examples in this section provide a few suggested, case-specific approaches.</p>
-            <p>While using visually hidden content (<span class="purple">.visually-hidden, aria-label</span>, and even <span class="purple">placeholder</span> content, which disappears once a form field has content) will benefit assistive technology users, a lack of visible label text may still be problematic for certain users. Some form of visible label is generally the best approach, both for accessibility and usability.</p>
-          </div>
+            <h1>Accented Tables</h1>
+            <h2 style="margin-left: -760px;margin-top: 40px;margin-bottom: -20px;">Striped rows</h2>
+            <p>Use <span class="purple">
+              .table-striped
+            </span> to add zebra-striping to any table row within the <span class="purple">< tbody></span>.</p>
+         
 
           </div>
         </div>
         <div class="secondCard">
           <div   class="heading">
-            <h1>CSS</h1>
-            <p>Many form variables are set at a general level to be re-used and extended by individual form components. You’ll see these most often as <span class="purple">$input-btn-*</span> and <span class="purple"> $input-*</span> variables.</p>
+            <h2 style="margin-left: -710px;margin-top: -50px;margin-bottom: -20px;">Striped Columns</h2>
+            <p>Use <span class="purple">.table-striped-columns</span> to add zebra-striping to any table column.
+
+            </p>
+         
+
+          </div>
+        </div>
+        
+        <div class="secondCard">
+          <div   class="heading">
+            <h2 style="margin-left: -710px;margin-top: -50px;margin-bottom: -20px;">Hoverable Rows</h2>
+            <p>Add <span class="purple">.table-hover</span> to enable a hover state on table rows within a <tbody>.
+
+            </p>
             
           </div>
         </div>
