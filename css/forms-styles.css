@@ -99,17 +99,18 @@
   max-width: 900px;
 }
 .main-heading {
-  font-size: 25px;
+  font-size: 30px;
   flex-direction: column;
   left: 0;
 }
 .main-heading h1{
-margin-left: -700px;
+margin-left: -660px;
 }
 .main-heading p{
   margin-left: 25px;
   margin-top: -10px;
   color: rgb(179, 178, 178);
+  font-size: 25px;
 }
 .firstCard{
   display: flex;
@@ -331,7 +332,7 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   position: relative;
   margin-top: 20px;
-  border: 1px solid rgb(252, 250, 250);
+  border: 1px solid rgb(149, 147, 147);
 }
 
 .form-code .tag {
@@ -400,10 +401,128 @@ code {
   transform: translateY(0);
 }
 .info-form-h2{
-  margin-left: -440px;
-  margin-bottom: -20px;
+  margin-left: 10px;
+  margin-bottom: -29px;
+  font-size: 10px;
+  margin: 10px 0 -20px;
+  
 }
-.info-form-h2 h2{
+.info-form-h2 p{
   color: #838282;
-
+  font-size: 20px;
 }
+/* Container styling */
+.form-eg2 {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: px;
+  background-color: #6f6f6f;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form elements styling */
+.form-eg2 fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-eg2 legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #8d8d8d;
+  margin-bottom: 15px;
+}
+
+.form-eg2 label {
+  font-weight: 600;
+  color: #b7b6b6;
+}
+.form-control{
+  color: rgb(253, 249, 249);
+}
+
+.form-eg2 input[type="text"],
+.form-eg2 select,
+.form-eg2 .form-check-input {
+  border-radius: 5px;
+  background-color: #424242;
+  color: #efebeb;
+  font-size: 17px;
+}
+
+.form-eg2 input[type="text"]:disabled,
+.form-eg2 select:disabled,
+.form-eg2 .form-check-input:disabled {
+  background-color: #303131;
+  opacity: 0.7;
+}
+
+.form-eg2 input[type="text"]:focus,
+.form-eg2 select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-eg2 .form-check-label {
+  color: #959494;
+}
+
+.form-eg2 .btn-primary {
+  margin-top: 10px;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: not-allowed; /* Indicates button is disabled due to the fieldset */
+}
+
+.form-eg2 .btn-primary:hover {
+  background-color: #0056b3;
+}
+.purple{
+  color: #e685b5;
+}
+.blue{
+  color: skyblue;
+}
+.blue a{
+text-decoration: underline;
+color: skyblue;
+}
+
+.form-points{
+  margin-left: 20px;
+}
+.form-points p{
+  margin-top: 0px;
+  color: white;
+}
+.forms-points p{
+  color: rgb(210, 207, 207);
+}
+.footer{
+  height:60px;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  margin-top: 100px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 18px;
+  border-top: 1px solid gray;
+  }
+  .first-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+  }
+  .first-footer p{
+    color: rgb(75, 147, 195);
+    font-size: 25px;
+  
+  }
