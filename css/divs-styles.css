@@ -1,0 +1,36 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; /* Centers the columns horizontally */
+  flex: 1 1 100%;
+
+}
+.col {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin: 5px;
+}
+.div-points{
+  margin-top: 10px;
+}
+.div-points p{
+  margin: 10px 0;
+}
+.col, .col-6, .col-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #09455d;
+  color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  flex-wrap: wrap;
+}
+.col-6 {
+  flex: 2;
+}
+.col-5 {
+  flex: 1.5;
+}

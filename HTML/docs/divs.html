@@ -6,6 +6,7 @@
     <title>CodeWave - Forms</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/forms-styles.css" />
+    <link rel="stylesheet" href="/css/divs-styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -45,7 +46,7 @@
           <p><i class="fa-brands fa-html5"></i> HTML Components:</p>
           <li><a href="forms.html">Forms</a></li>
           <li><a href="tables.html">Tables</a></li>
-          <li><a href="divs.html">Div</a></li>
+          <li><a href="divs.html">Grid</a></li>
           <li><a href="buttons.html">Buttons</a></li>
           <li><a href="images.html">Images</a></li>
           <li><a href="inputs.html">Inputs</a></li>
@@ -77,83 +78,23 @@
       </aside>
       <div class="main-bar">
         <div class="main-heading">
-          <h1 style="margin-left: -730px;">Divs</h1>
-          <p>
-            Examples and usage guidelines for form control styles, layout
-            options, and custom components for creating a wide variety of forms.
+          <h1 style="margin-left: -730px">Grid</h1>
+          <p style="font-size: 20px">
+            Use our powerful mobile-first flexbox grid to build layouts of all
+            shapes and sizes thanks to a twelve column system, six default
+            responsive tiers, Sass variables and mixins, and dozens of
+            predefined classes. ads via Carbon.
           </p>
-        </div>
-        <div class="firstCard">
-          <div class="c1">
-            <h2>Form Control</h2>
-            <p>
-              Style textual inputs and textareas with support for multiple
-              states.
-            </p>
-          </div>
-
-          <div class="c2">
-            <h2>Checks & radios</h2>
-            <p>
-              Use our custom radio buttons and checkboxes in forms for selecting
-              input options.
-            </p>
-          </div>
-
-          <div class="c3">
-            <h2>Input Group</h2>
-            <p>
-              Attach labels and buttons to your inputs for increased semantic
-              value.
-            </p>
-          </div>
-
-          <div class="c4">
-            <h2>Layout</h2>
-            <p>
-              Create inline, horizontal, or complex grid-based layouts with your
-              forms.
-            </p>
-          </div>
-
-          <div class="c5">
-            <h2>Select</h2>
-            <p>
-              Improve browser default select elements with a custom initial
-              appearance.
-            </p>
-          </div>
-
-          <div class="c6">
-            <h2>Range</h2>
-            <p>Replace browser default range inputs with our custom version.</p>
-          </div>
-
-          <div class="c7">
-            <h2>Floating labels</h2>
-            <p>
-              Create beautifully simple form labels that float over your input
-              fields.
-            </p>
-          </div>
-
-          <div class="c8">
-            <h2>Validation</h2>
-            <p>
-              Validate your forms with custom or native validation behaviors and
-              styles.
-            </p>
-          </div>
         </div>
 
         <div class="secondCard">
           <div class="heading">
-            <h1>Overview</h1>
+            <h1>Example</h1>
             <p>
-              Be sure to use an appropriate type attribute on all inputs (e.g.,
-              email for email address or number for numerical information) to
-              take advantage of newer input controls like email verification,
-              number selection, and more.
+              CodeWave’s grid system uses a series of containers, rows, and
+              columns to layout and align content. It’s built with flexbox and
+              is fully responsive. Below is an example and an in-depth
+              explanation for how the grid system comes together.
             </p>
             <p>
               Here’s a quick example to demonstrate CodeWave’s form styles. Keep
@@ -162,44 +103,13 @@
             </p>
           </div>
           <div class="form-eg">
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
+            <div class="container text-center" style="text-align: center">
+              <div class="row">
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
               </div>
-              <div class="mb-3" style="margin: 10px 0">
-                <label for="exampleInputPassword1" class="form-label"
-                  >Password</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                />
-              </div>
-              <div class="mb-3 form-check" style="margin-left: 20px">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  style="margin-left: -829px; margin-bottom: -18px"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Check me out</label
-                >
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
           </div>
           <div class="info-form-h2">
             <p>HTML Snippet</p>
@@ -208,83 +118,116 @@
             <button class="copy-btn" onclick="copyCode()">
               <i class="fas fa-copy"></i>
             </button>
-            <pre><code>&lt;form&gt;
-        &lt;div class=&quot;mb-3&quot;&gt;
-          &lt;label for=&quot;<span class="attribute">exampleInputEmail1</span>&quot; class=&quot;<span class="attribute">form-label</span>&quot;&gt;<span class="tag">Email address</span>&lt;/label&gt;
-          &lt;input type=&quot;<span class="attribute">email</span>&quot; class=&quot;<span class="attribute">form-control</span>&quot; id=&quot;<span class="attribute">exampleInputEmail1</span>&quot; aria-describedby=&quot;<span class="attribute">emailHelp</span>&quot;&gt;
-          &lt;div id=&quot;<span class="attribute">emailHelp</span>&quot; class=&quot;<span class="attribute">form-text</span>&quot;&gt;<span class="text">We'll never share your email with anyone else.</span>&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;<span class="attribute">mb-3</span>&quot;&gt;
-          &lt;label for=&quot;<span class="attribute">exampleInputPassword1</span>&quot; class=&quot;<span class="attribute">form-label</span>&quot;&gt;<span class="tag">Password</span>&lt;/label&gt;
-          &lt;input type=&quot;<span class="attribute">password</span>&quot; class=&quot;<span class="attribute">form-control</span>&quot; id=&quot;<span class="attribute">exampleInputPassword1</span>&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;<span class="attribute">mb-3 form-check</span>&quot;&gt;
-          &lt;input type=&quot;<span class="attribute">checkbox</span>&quot; class=&quot;<span class="attribute">form-check-input</span>&quot; id=&quot;<span class="attribute">exampleCheck1</span>&quot;&gt;
-          &lt;label class=&quot;<span class="attribute">form-check-label</span>&quot; for=&quot;<span class="attribute">exampleCheck1</span>&quot;&gt;<span class="tag">Check me out</span>&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;button type=&quot;<span class="attribute">submit</span>&quot; class=&quot;<span class="attribute">btn btn-primary</span>&quot;&gt;<span class="tag">Submit</span>&lt;/button&gt;
-      &lt;/form&gt;
-      </code></pre>
+            <pre style="margin-left: -120px">
+              &lt;div <span style="color: rgb(245, 101, 101);">class</span>=<span style="color: rgb(66, 215, 66);">"container text-center"</span>&gt;
+                &lt;div <span style="color: rgb(245, 101, 101);red;">class</span>=<span style="color: rgb(66, 215, 66);">"row"</span>&gt;
+                  &lt;div <span style="color: rgb(245, 101, 101);red;">class</span>=<span style="color: rgb(66, 215, 66);">"col"</span>&gt;
+                    Column
+                  &lt;/div&gt;
+                  &lt;div <span style="color: rgb(245, 101, 101);red;">class</span>=<span style="color: rgb(66, 215, 66);">"col"</span>&gt;
+                    Column
+                  &lt;/div&gt;
+                  &lt;div <span style="color: rgb(245, 101, 101);;">class</span>=<span style="color: rgb(66, 215, 66);">"col"</span>&gt;
+                    Column
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              </pre>
+          </div>
+          <p
+            style="color: rgb(180, 179, 179); margin-top: 20px; font-size: 18px"
+          >
+            The above example creates three equal-width columns across all
+            devices and viewports using our predefined grid classes. Those
+            columns are centered in the page with the parent .container.
+          </p>
+        </div>
+        <div class="secondCard">
+          <div class="heading" style="margin-top: -30px; font-size: 30px">
+            <h1>How it works</h1>
+            <p>Breaking it down, here’s how the grid system comes together:</p>
+          </div>
+          <div class="div-points">
+            <p>
+              • Our grid supports six responsive breakpoints. Breakpoints are
+              based on <span class="purple">min-width</span> media queries,
+              meaning they affect that breakpoint and all those above it (e.g.,
+              <span class="purple">.col-sm-4</span> applies to
+              <span class="purple">sm, md, lg, xl,</span> and
+              <span class="purple">xxl</span> ). This means you can control
+              container and column sizing and behavior by each breakpoint.
+            </p>
+
+            <p>
+              • Containers center and horizontally pad your content. Use
+              <span class="purple">.container</span> for a responsive pixel
+              width, <span class="purple">.container-fluid</span> for width:
+              100% across all viewports and devices, or a responsive container
+              (e.g., <span class="purple">.container-md</span>) for a
+              combination of fluid and pixel widths.
+            </p>
+
+            <p>
+              • Rows are wrappers for columns. Each column has horizontal
+              <span class="purple">padding</span> (called a gutter) for
+              controlling the space between them. This
+              <span class="purple">padding</span> is then counteracted on the
+              rows with negative margins to ensure the content in your columns
+              is visually aligned down the left side. Rows also support modifier
+              classes to uniformly apply column sizing and gutter classes to
+              change the spacing of your content.
+            </p>
+
+            <p>
+              • Columns are incredibly flexible. There are 12 template columns
+              available per row, allowing you to create different combinations
+              of elements that span any number of columns. Column classes
+              indicate the number of template columns to span (e.g.,
+              <span class="purple">col-4</span> spans four)
+              <span class="purple">.widths</span> are set in percentages so you
+              always have the same relative sizing.
+            </p>
+
+            <p>
+              • Gutters are also responsive and customizable. Gutter classes are
+              available across all breakpoints, with all the same sizes as our
+              margin and padding spacing. Change horizontal gutters with
+              <span class="purple">.gx-*</span> classes, vertical gutters with
+              <span class="purple">.gy-*</span>, or all gutters with
+              <span class="purple">.g-*</span> classes.
+              <span class="purple">.g-0 </span> is also available to remove
+              gutters.
+            </p>
           </div>
         </div>
+
         <div class="secondCard">
           <div class="heading">
-            <h1>Disabled Forms</h1>
+            <h1>Setting one column width</h1>
             <p>
-              Add the disabled boolean attribute on an input to prevent user
-              interactions and make it appear lighter.
+              Auto-layout for flexbox grid columns also means you can set the
+              width of one column and have the sibling columns automatically
+              resize around it. You may use predefined grid classes (as shown
+              below), grid mixins, or inline widths. Note that the other columns
+              will resize no matter the width of the center column.
             </p>
           </div>
-          <div class="form-code">
-            <button
-              class="copy-btn"
-              onclick="copyCode()"
-              style="margin-top: -3px"
+          <div class="form-eg">
+            <div
+              class="container text-center"
+              style="display: flex; flex-wrap: wrap"
             >
-              <i class="fas fa-copy"></i>
-            </button>
-            <pre><code style="color: #d73a49; max-width: 500px;">&lt;<span style="color: #49e162">input</span> <span style="color: #ac88ef">class</span>=<span style="color: #49e162">"form-control"</span> <span style="color: #9f78e7">id</span>=<span style="color: #09c5d6">"disabledInput"</span> <span style="color: #ac88ef">type</span>=<span style="color: #09c5d6">"text"</span> <span style="color: #ac88ef">placeholder</span>=<span style="color: #09c5d6">"Disabled input here..."</span> <span style="color: #ac88ef">disabled</span>&gt;</code></pre>
-          </div>
-
-          <div class="form-eg2">
-            <form>
-              <fieldset disabled>
-                <legend>Disabled fieldset example</legend>
-                <div class="mb-3">
-                  <label for="disabledTextInput" class="form-label"
-                    >Disabled input</label
-                  >
-                  <input
-                    type="text"
-                    id="disabledTextInput"
-                    class="form-control"
-                    placeholder="Disabled input"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="disabledSelect" class="form-label"
-                    >Disabled select menu</label
-                  >
-                  <select id="disabledSelect" class="form-select">
-                    <option>Disabled select</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="disabledFieldsetCheck"
-                      disabled
-                    />
-                    <label class="form-check-label" for="disabledFieldsetCheck">
-                      Can't check this
-                    </label>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </fieldset>
-            </form>
+              <div class="row">
+                <div class="col">1 of 3</div>
+                <div class="col-6">2 of 3 (wider)</div>
+                <div class="col">3 of 3</div>
+              </div>
+              <div class="row">
+                <div class="col">1 of 3</div>
+                <div class="col-5">2 of 3 (wider)</div>
+                <div class="col">3 of 3</div>
+              </div>
+            </div>
           </div>
           <div class="info-form-h2">
             <p>HTML Snippet</p>
@@ -293,107 +236,41 @@
             <button class="copy-btn" onclick="copyCode()">
               <i class="fas fa-copy"></i>
             </button>
-            <pre><code style="color: #d73a49; padding: -100px;margin-left: -20px;">&lt;<span style="color: #75d78c">form</span>&gt;
-              &lt;<span style="color: #75d78c ;">fieldset</span> <span style="color: #9f78e7">disabled</span>&gt;
-                &lt;<span style="color: #75d78c">legend</span>&gt;Disabled fieldset example&lt;/<span style="color: #75d78c">legend</span>&gt;
-                &lt;<span style="color: #75d78c">div</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"mb-3"</span>&gt;
-                  &lt;<span style="color: #75d78c">label</span> <span style="color: #9f78e7">for</span>=<span style="color: #659fe1">"disabledTextInput"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-label"</span>&gt;Disabled input&lt;/<span style="color: #75d78c">label</span>&gt;
-                  &lt;<span style="color: #75d78c">input</span> <span style="color: #9f78e7">type</span>=<span style="color: #659fe1">"text"</span> <span style="color: #9f78e7">id</span>=<span style="color: #659fe1">"disabledTextInput"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-control"</span> <span style="color: #9f78e7">placeholder</span>=<span style="color: #659fe1">"Disabled input"</span>&gt;
-                &lt;/<span style="color: #75d78c">div</span>&gt;
-                &lt;<span style="color: #75d78c">div</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"mb-3"</span>&gt;
-                  &lt;<span style="color: #75d78c">label</span> <span style="color: #9f78e7">for</span>=<span style="color: #659fe1">"disabledSelect"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-label"</span>&gt;Disabled select menu&lt;/<span style="color: #75d78c">label</span>&gt;
-                  &lt;<span style="color: #75d78c">select</span> <span style="color: #9f78e7">id</span>=<span style="color: #659fe1">"disabledSelect"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-select"</span>&gt;
-                    &lt;<span style="color: #75d78c">option</span>&gt;Disabled select&lt;/<span style="color: #75d78c">option</span>&gt;
-                  &lt;/<span style="color: #75d78c">select</span>&gt;
-                &lt;/<span style="color: #75d78c">div</span>&gt;
-                &lt;<span style="color: #75d78c">div</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"mb-3"</span>&gt;
-                  &lt;<span style="color: #75d78c">div</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-check"</span>&gt;
-                    &lt;<span style="color: #75d78c">input</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-check-input"</span> <span style="color: #9f78e7">type</span>=<span style="color: #659fe1">"checkbox"</span> <span style="color: #9f78e7">id</span>=<span style="color: #659fe1">"disabledFieldsetCheck"</span> <span style="color: #9f78e7">disabled</span>&gt;
-                    &lt;<span style="color: #75d78c">label</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"form-check-label"</span> <span style="color: #9f78e7">for</span>=<span style="color: #659fe1">"disabledFieldsetCheck"</span>&gt;
-                      Can't check this
-                    &lt;/<span style="color: #75d78c">label</span>&gt;
-                  &lt;/<span style="color: #75d78c">div</span>&gt;
-                &lt;/<span style="color: #75d78c">div</span>&gt;
-                &lt;<span style="color: #75d78c">button</span> <span style="color: #9f78e7">type</span>=<span style="color: #659fe1">"submit"</span> <span style="color: #9f78e7">class</span>=<span style="color: #659fe1">"btn btn-primary"</span>&gt;Submit&lt;/<span style="color: #75d78c">button</span>&gt;
-              &lt;/<span style="color: #75d78c">fieldset</span>&gt;
-            &lt;/<span style="color: #75d78c">form</span>&gt;
-            </code></pre>
+            <pre>
+&lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);">"container text-center"</span>&gt;&lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68)">"row"</span>&gt;
+    &lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);;">"col"</span>&gt;
+      1 of 3&lt;/div&gt;&lt;div <span style="color: rgb(241, 120, 120)red;">class</span>=<span style="color: rgb(68, 241, 68);">"col-6"</span>&gt;
+      2 of 3 (wider) &lt;/div&gt;
+    &lt;div <span style="color: rgb(241, 120, 120)red;">class</span>=<span style="color: rgb(68, 241, 68);">"col"</span>&gt;
+      3 of 3 &lt;/div&gt;
+  &lt;/div&gt;&lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);">"row"</span>&gt;
+    &lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);">"col"</span>&gt;
+      1 of 3 &lt;/div&gt;
+    &lt;div <span style="color: rgb(241, 120, 120)red;">class</span>=<span style="color: rgb(68, 241, 68);">"col-5"</span>&gt;
+      2 of 3 (wider) &lt;/div&gt; &lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);">"col"</span>&gt;   3 of 3 &lt;/div&gt; &lt;/div&gt;
+&lt;/div&gt;
+</pre>
           </div>
-        </div>
-        <div class="secondCard">
-          <div   class="heading">
-            <h1>Accessibility</h1>
-            <div class="forms-points">
-
-            <p>
-              Ensure that all form controls have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a < label > element, or—in the case of buttons—to include sufficiently descriptive text as part of the < button>...< button/> content.
-            </p>
-            <p>For situations where it’s not possible to include a visible < label> or appropriate text content, there are alternative ways of still providing an accessible name, such as:</p>
-            <div class="form-points">
-              <p style="margin-top: 10px;">• < label> elements hidden using the <span class="purple">.visually-hidden class</span></p>
-              <p>• Pointing to an existing element that can act as a label using <span class="purple">aria-labelledby</span></p>
-              <p>• Providing a <span class="purple">title</span> attribute</p>
-              <p style="margin-bottom: 10px;">• Explicitly setting the accessible name on an element using <span class="purple">aria-label</span></p>
-            </div>
-            <p>If none of these are present, assistive technologies may resort to using the placeholder attribute as a fallback for the accessible name on <span class="purple">< input></span> and <span class="purple">< textarea></span> elements. The examples in this section provide a few suggested, case-specific approaches.</p>
-            <p>While using visually hidden content (<span class="purple">.visually-hidden, aria-label</span>, and even <span class="purple">placeholder</span> content, which disappears once a form field has content) will benefit assistive technology users, a lack of visible label text may still be problematic for certain users. Some form of visible label is generally the best approach, both for accessibility and usability.</p>
-          </div>
-
-          </div>
-        </div>
-        <div class="secondCard">
-          <div   class="heading">
-            <h1>CSS</h1>
-            <p>Many form variables are set at a general level to be re-used and extended by individual form components. You’ll see these most often as <span class="purple">$input-btn-*</span> and <span class="purple"> $input-*</span> variables.</p>
-            
-          </div>
-        </div>
-        <div class="secondCard">
-          <div   class="heading">
-            <h1>Sass variables</h1>
-            <p><span class="purple">$input-btn-*</span> variables are shared global variables between our <span class="blue"><a href="buttons.html">buttons</a></span> and our form components. You’ll find these frequently reassigned as values to other component-specific variables.</p>
-            
-          </div>
-          <div class="form-code">
-            <button class="copy-btn" onclick="copyCode()">
-              <i class="fas fa-copy"></i>
-            </button>
-            <pre style="  border-radius: 8px;margin-left: -120px;" >
-              <code style="color: #f0f0f0;">
-                <span style="color: #ffad33;">$input-btn-padding-y</span>: <span style="color: #82e4b5;">.375rem</span>;
-                <span style="color: #ffad33;">$input-btn-padding-x</span>: <span style="color: #82e4b5;">.75rem</span>;
-                <span style="color: #ffad33;">$input-btn-font-family</span>: <span style="color: #82e4b5;">null</span>;
-                <span style="color: #ffad33;">$input-btn-font-size</span>: <span style="color: #82e4b5;">$font-size-base</span>;
-                <span style="color: #ffad33;">$input-btn-line-height</span>: <span style="color: #82e4b5;">$line-height-base</span>;
-          
-                <span style="color: #ffad33;">$input-btn-focus-width</span>: <span style="color: #82e4b5;">$focus-ring-width</span>;
-                <span style="color: #ffad33;">$input-btn-focus-color-opacity</span>: <span style="color: #82e4b5;">$focus-ring-opacity</span>;
-                <span style="color: #ffad33;">$input-btn-focus-color</span>: <span style="color: #82e4b5;">$focus-ring-color</span>;
-                <span style="color: #ffad33;">$input-btn-focus-blur</span>: <span style="color: #82e4b5;">$focus-ring-blur</span>;
-                <span style="color: #ffad33;">$input-btn-focus-box-shadow</span>: <span style="color: #82e4b5;">$focus-ring-box-shadow</span>;
-          
-                <span style="color: #ffad33;">$input-btn-padding-y-sm</span>: <span style="color: #82e4b5;">.25rem</span>;
-                <span style="color: #ffad33;">$input-btn-padding-x-sm</span>: <span style="color: #82e4b5;">.5rem</span>;
-                <span style="color: #ffad33;">$input-btn-font-size-sm</span>: <span style="color: #82e4b5;">$font-size-sm</span>;
-          
-                <span style="color: #ffad33;">$input-btn-padding-y-lg</span>: <span style="color: #82e4b5;">.5rem</span>;
-                <span style="color: #ffad33;">$input-btn-padding-x-lg</span>: <span style="color: #82e4b5;">1rem</span>;
-                <span style="color: #ffad33;">$input-btn-font-size-lg</span>: <span style="color: #82e4b5;">$font-size-lg</span>;
-          
-                <span style="color: #ffad33;">$input-btn-border-width</span>: <span style="color: #82e4b5;">var(--#{$prefix}border-width)</span>;
-              </code>
-            </pre>
-          </div>
+        
         </div>
       </div>
     </div>
     <footer class="footer">
       <div class="first-footer">
-        <img src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png" alt="" height="50px" style="border-radius: 50px; margin-right: 5px;"><p>CodeWave</p>
+        <img
+          src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png"
+          alt=""
+          height="50px"
+          style="border-radius: 50px; margin-right: 5px"
+        />
+        <p>CodeWave</p>
       </div>
-      <p >&copy; 2024 | All Rights Reserved | Designed and built with all the love in the world by the Priyatosh Kumar <span style="color: red;font-size: 25px;">♥
-      </span></p>
-       </footer>
+      <p>
+        &copy; 2024 | All Rights Reserved | Designed and built with all the love
+        in the world by the Priyatosh Kumar
+        <span style="color: red; font-size: 25px">♥ </span>
+      </p>
+    </footer>
     <script>
       function copyCode() {
         // Select the text in the pre element
