@@ -138,13 +138,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Example of custom shortcut keys added to CodeMirror editors
-Object.values(editors).forEach(editor => {
+  Object.values(editors).forEach(editor => {
     editor.setOption("extraKeys", {
         "Alt-Shift-Down": function(cm) { // Duplicate line
-            const line = cm.getCursor().line;
-            const lineContent = cm.getLine(line);
-            cm.replaceRange("\n" + lineContent, { line: line + 1, ch: 0 });
+            const cursor = cm.getCursor();
+            const lineContent = cm.getLine(cursor.line);
+            cm.replaceRange(lineContent + "\n", { line: cursor.line + 1, ch: 0 });
         },
         "Alt-Down": function(cm) { // Move line down
             const cursor = cm.getCursor();
@@ -155,15 +154,16 @@ Object.values(editors).forEach(editor => {
         },
         "Alt-Up": function(cm) { // Move line up
             const cursor = cm.getCursor();
-            if (cursor.line === 0) return; // Can't move first line up
+            if (cursor.line === 0) return; // Avoid moving the first line up
             const lineContent = cm.getLine(cursor.line);
             cm.replaceRange("", { line: cursor.line, ch: 0 }, { line: cursor.line + 1, ch: 0 });
             cm.replaceRange(lineContent + "\n", { line: cursor.line - 1, ch: 0 });
             cm.setCursor({ line: cursor.line - 1, ch: cursor.ch });
         },
-        "Ctrl-/": "toggleComment", // Toggle comment
+        "Ctrl-/": "toggleComment" // Toggle comment
     });
 });
+
 
 
 
