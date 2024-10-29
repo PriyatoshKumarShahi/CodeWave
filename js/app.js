@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
       lineNumbers: true,
       lineWrapping: true,
       extraKeys: {
-          "Ctrl-Space": "autocomplete",
+          "Ctrl-Space": "autocomplete",        
       }
   });
 
@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
       lineWrapping: true,
       extraKeys: {
           "Ctrl-Space": "autocomplete",
+
       }
   });
 
@@ -58,6 +59,12 @@ document.addEventListener('DOMContentLoaded', function () {
           "Ctrl-Space": "autocomplete",
       }
   });
+
+
+
+
+
+
 
   // Auto-closing brackets and quotes
   Object.values(editors).forEach(editor => {
@@ -252,6 +259,11 @@ document.addEventListener('DOMContentLoaded', function () {
           alert(`${language.toUpperCase()} code copied to clipboard!`);
       }
   }
+
+  document.getElementById('save-code').addEventListener('click', function() {
+    saveCodeToLocalStorage();
+    alert('Code saved successfully!'); // Alert message after saving
+});
 
   document.getElementById('copy-html').addEventListener('click', () => copyCode('html'));
   document.getElementById('copy-css').addEventListener('click', () => copyCode('css'));
