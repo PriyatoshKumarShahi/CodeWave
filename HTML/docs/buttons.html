@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeWave - Forms</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/forms-styles.css" />
+    <link rel="stylesheet" href="/css/divs-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png"
+          alt="CodeWave Logo"
+          height="60"
+          style="border-radius: 50%"
+        />
+        <p>CodeWave</p>
+      </div>
+      <div class="nav-conntents">
+        <ul>
+          <li><a href="../main.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="../codeDocs.html">Docs</a></li>
+          <li><a href="../index.html">Start Coding</a></li>
+          <button><a href="../sign-in.html">Login</a></button>
+          <button><a href="../sign-up.html">Register</a></button>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <aside class="sidebar">
+        <h3 style="margin-left: 30px">
+          <i class="fa-solid fa-book-open"></i> Getting Started
+        </h3>
+        <ul>
+          <li style="margin-bottom: -20px">
+            <a href="../codeDocs.html">Introduction</a>
+          </li>
+          <p><i class="fa-brands fa-html5"></i> HTML Components:</p>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="divs.html">Grid</a></li>
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="images.html">Images</a></li>
+          <li><a href="inputs.html">Inputs</a></li>
+          <li><a href="cards.html">Cards</a></li>
+          <li><a href="alerts.html">Alerts</a></li>
+          <li><a href="carousel.html">Carousel</a></li>
+          <li><a href="dropdowns.html">Dropdowns</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="placeholder.html">Placeholder</a></li>
+          <li><a href="spinners.html">Spinners</a></li>
+
+          <p>
+            <i style="margin-right: 5px" class="fa-brands fa-css3-alt"></i
+            >Customize
+          </p>
+          <li><a href="background.html">Background</a></li>
+          <li><a href="transitions.html">Transitions</a></li>
+          <li><a href="border.html">Border</a></li>
+          <li><a href="fonts.html">Fonts</a></li>
+          <li><a href="colors.html">Colors</a></li>
+          <li><a href="animation.html">Animations</a></li>
+          <li><a href="margin.html">Margins</a></li>
+          <li><a href="paddings.html">Paddings</a></li>
+          <li><a href="icons.html">Icons</a></li>
+          <li><a href="links.html">Links</a></li>
+          <li><a href="display.html">Display</a></li>
+          <li><a href="overflow.html">Overflow</a></li>
+        </ul>
+      </aside>
+      <div class="main-bar">
+        <div class="main-heading">
+          <h1 style="margin-left: -630px">Buttons</h1>
+          <p style="font-size: 20px">
+            Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+
+
+          </p>
+        </div>
+
+        <div class="secondCard">
+          <div class="heading">
+            <h1>Base Class</h1>
+            <p>
+            CodeWave has a base .btn class that sets up basic styles such as padding and content alignment. By default, .btn controls have a transparent border and background color, and lack any explicit focus and hover styles.
+            </p>
+           
+          </div>
+          <div class="form-eg">
+            <div class="container text-center" style="text-align: center">
+              <div class="row" style="height: 50px;">
+                <button style="background-color: transparent;border: none; color: white;font-size: 18px;margin-left: -700px; ">Base Class</button>
+                
+              </div>
+            </div>
+          </div>
+          <div class="info-form-h2">
+            <p>HTML Snippet</p>
+          </div>
+          <div class="form-code">
+            <button class="copy-btn"  onclick="copyCode()">
+              <i class="fas fa-copy"></i>
+            </button>
+            <pre style=" margin-left: -15px; ">
+              <code style="color: #d63384; font-size: 16px;">
+                &lt;button type="button" class="btn" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px;"&gt;
+                  Base class
+                &lt;/button&gt;
+              </code>
+            </pre>
+            
+          </div>
+          <p
+            style="color: rgb(180, 179, 179); margin-top: 20px; font-size: 18px"
+          >
+            The above example creates three equal-width columns across all
+            devices and viewports using our predefined grid classes. Those
+            columns are centered in the page with the parent .container.
+          </p>
+        </div>
+        <div class="secondCard">
+          <div class="heading" style="margin-top: -30px; font-size: 30px">
+            <h1>How it works</h1>
+            <p>Breaking it down, here’s how the grid system comes together:</p>
+          </div>
+          <div class="div-points">
+            <p>
+              • Our grid supports six responsive breakpoints. Breakpoints are
+              based on <span class="purple">min-width</span> media queries,
+              meaning they affect that breakpoint and all those above it (e.g.,
+              <span class="purple">.col-sm-4</span> applies to
+              <span class="purple">sm, md, lg, xl,</span> and
+              <span class="purple">xxl</span> ). This means you can control
+              container and column sizing and behavior by each breakpoint.
+            </p>
+
+            <p>
+              • Containers center and horizontally pad your content. Use
+              <span class="purple">.container</span> for a responsive pixel
+              width, <span class="purple">.container-fluid</span> for width:
+              100% across all viewports and devices, or a responsive container
+              (e.g., <span class="purple">.container-md</span>) for a
+              combination of fluid and pixel widths.
+            </p>
+
+            <p>
+              • Rows are wrappers for columns. Each column has horizontal
+              <span class="purple">padding</span> (called a gutter) for
+              controlling the space between them. This
+              <span class="purple">padding</span> is then counteracted on the
+              rows with negative margins to ensure the content in your columns
+              is visually aligned down the left side. Rows also support modifier
+              classes to uniformly apply column sizing and gutter classes to
+              change the spacing of your content.
+            </p>
+
+            <p>
+              • Columns are incredibly flexible. There are 12 template columns
+              available per row, allowing you to create different combinations
+              of elements that span any number of columns. Column classes
+              indicate the number of template columns to span (e.g.,
+              <span class="purple">col-4</span> spans four)
+              <span class="purple">.widths</span> are set in percentages so you
+              always have the same relative sizing.
+            </p>
+
+            <p>
+              • Gutters are also responsive and customizable. Gutter classes are
+              available across all breakpoints, with all the same sizes as our
+              margin and padding spacing. Change horizontal gutters with
+              <span class="purple">.gx-*</span> classes, vertical gutters with
+              <span class="purple">.gy-*</span>, or all gutters with
+              <span class="purple">.g-*</span> classes.
+              <span class="purple">.g-0 </span> is also available to remove
+              gutters.
+            </p>
+          </div>
+        </div>
+
+        <div class="secondCard">
+          <div class="heading">
+            <h1>Setting one column width</h1>
+            <p>
+              Auto-layout for flexbox grid columns also means you can set the
+              width of one column and have the sibling columns automatically
+              resize around it. You may use predefined grid classes (as shown
+              below), grid mixins, or inline widths. Note that the other columns
+              will resize no matter the width of the center column.
+            </p>
+          </div>
+          <div class="form-eg">
+            <div
+              class="container text-center"
+              style="display: flex; flex-wrap: wrap"
+            >
+              <div class="row">
+                <div class="col">1 of 3</div>
+                <div class="col-6">2 of 3 (wider)</div>
+                <div class="col">3 of 3</div>
+              </div>
+              <div class="row">
+                <div class="col">1 of 3</div>
+                <div class="col-5">2 of 3 (wider)</div>
+                <div class="col">3 of 3</div>
+              </div>
+            </div>
+          </div>
+          <div class="info-form-h2">
+            <p>HTML Snippet</p>
+          </div>
+          <div class="form-code">
+            <button class="copy-btn" id="code-block" onclick="copyCode()">
+              <i class="fas fa-copy"></i>
+            </button>
+            <pre id="code-block">
+&lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);">"container text-center"</span>&gt;&lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68)">"row"</span>&gt;
+    &lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);;">"col"</span>&gt;
+      1 of 3&lt;/div&gt;&lt;div <span style="color: rgb(241, 120, 120)red;">class</span>=<span style="color: rgb(68, 241, 68);">"col-6"</span>&gt;
+      2 of 3 (wider) &lt;/div&gt;
+    &lt;div <span style="color: rgb(241, 120, 120)red;">class</span>=<span style="color: rgb(68, 241, 68);">"col"</span>&gt;
+      3 of 3 &lt;/div&gt;
+  &lt;/div&gt;&lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);">"row"</span>&gt;
+    &lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);">"col"</span>&gt;
+      1 of 3 &lt;/div&gt;
+    &lt;div <span style="color: rgb(241, 120, 120)red;">class</span>=<span style="color: rgb(68, 241, 68);">"col-5"</span>&gt;
+      2 of 3 (wider) &lt;/div&gt; &lt;div <span style="color: rgb(241, 120, 120);">class</span>=<span style="color: rgb(68, 241, 68);">"col"</span>&gt;   3 of 3 &lt;/div&gt; &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="first-footer">
+        <img
+          src="/assets/DALL·E 2024-10-21 23.26.32 - A modern and sleek logo for a code editor named 'CodeWave'. The logo should feature a stylized wave symbol that represents flow, integrated with eleme.png"
+          alt=""
+          height="50px"
+          style="border-radius: 50px; margin-right: 5px"
+        />
+        <p>CodeWave</p>
+      </div>
+      <p>
+        &copy; 2024 | All Rights Reserved | Designed and built with all the love
+        in the world by the Priyatosh Kumar
+        <span style="color: red; font-size: 25px">♥ </span>
+      </p>
+    </footer>
+    <script>
+      function copyCode() {
+        // Select the text in the pre element
+        var codeBlock = document.getElementById("code-block").innerText;
+
+        // Create a temporary textarea to copy the text
+        var tempTextArea = document.createElement("textarea");
+        tempTextArea.value = codeBlock;
+        document.body.appendChild(tempTextArea);
+
+        // Select and copy the text from the textarea
+        tempTextArea.select();
+        document.execCommand("copy");
+
+        // Remove the temporary textarea
+        document.body.removeChild(tempTextArea);
+
+        // Optional: Alert user about successful copy
+        alert("Code copied to clipboard!");
+      }
+    </script>
+  </body>
+</html>
