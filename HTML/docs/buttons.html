@@ -80,9 +80,8 @@
         <div class="main-heading">
           <h1 style="margin-left: -630px">Buttons</h1>
           <p style="font-size: 20px">
-            Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
-
-
+            Use Bootstrap’s custom button styles for actions in forms, dialogs,
+            and more with support for multiple sizes, states, and more.
           </p>
         </div>
 
@@ -90,15 +89,26 @@
           <div class="heading">
             <h1>Base Class</h1>
             <p>
-            CodeWave has a base .btn class that sets up basic styles such as padding and content alignment. By default, .btn controls have a transparent border and background color, and lack any explicit focus and hover styles.
+              CodeWave has a base .btn class that sets up basic styles such as
+              padding and content alignment. By default, .btn controls have a
+              transparent border and background color, and lack any explicit
+              focus and hover styles.
             </p>
-           
           </div>
           <div class="form-eg">
             <div class="container text-center" style="text-align: center">
-              <div class="row" style="height: 50px;">
-                <button style="background-color: transparent;border: none; color: white;font-size: 18px;margin-left: -700px; ">Base Class</button>
-                
+              <div class="row" style="height: 50px">
+                <button
+                  style="
+                    background-color: transparent;
+                    border: none;
+                    color: white;
+                    font-size: 18px;
+                    margin-left: -700px;
+                  "
+                >
+                  Base Class
+                </button>
               </div>
             </div>
           </div>
@@ -106,82 +116,37 @@
             <p>HTML Snippet</p>
           </div>
           <div class="form-code">
-            <button class="copy-btn"  onclick="copyCode()">
+            <button class="copy-btn" onclick="copyCode()">
               <i class="fas fa-copy"></i>
             </button>
-            <pre style=" margin-left: -15px; ">
+            <pre style="margin-left: -15px">
               <code style="color: #d63384; font-size: 16px;">
-                &lt;button type="button" class="btn" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px;"&gt;
-                  Base class
-                &lt;/button&gt;
-              </code>
+               <span style="margin-left: -100px;"> &lt;button type="button" class="btn" style="background-color: #007bff; color: </span>white; padding: 10px 20px; border: none; border-radius: 5px;"&gt;
+<span style="margin-left: -150px;">                  Base class</span>   
+<span>  &lt;/button&gt;</span>              </code>
             </pre>
-            
           </div>
           <p
             style="color: rgb(180, 179, 179); margin-top: 20px; font-size: 18px"
-          >
-            The above example creates three equal-width columns across all
-            devices and viewports using our predefined grid classes. Those
-            columns are centered in the page with the parent .container.
+          >The .btn class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
           </p>
         </div>
         <div class="secondCard">
           <div class="heading" style="margin-top: -30px; font-size: 30px">
-            <h1>How it works</h1>
-            <p>Breaking it down, here’s how the grid system comes together:</p>
+            <h1>Variants</h1>
+            <p>Bootstrap includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.</p>
           </div>
-          <div class="div-points">
-            <p>
-              • Our grid supports six responsive breakpoints. Breakpoints are
-              based on <span class="purple">min-width</span> media queries,
-              meaning they affect that breakpoint and all those above it (e.g.,
-              <span class="purple">.col-sm-4</span> applies to
-              <span class="purple">sm, md, lg, xl,</span> and
-              <span class="purple">xxl</span> ). This means you can control
-              container and column sizing and behavior by each breakpoint.
-            </p>
-
-            <p>
-              • Containers center and horizontally pad your content. Use
-              <span class="purple">.container</span> for a responsive pixel
-              width, <span class="purple">.container-fluid</span> for width:
-              100% across all viewports and devices, or a responsive container
-              (e.g., <span class="purple">.container-md</span>) for a
-              combination of fluid and pixel widths.
-            </p>
-
-            <p>
-              • Rows are wrappers for columns. Each column has horizontal
-              <span class="purple">padding</span> (called a gutter) for
-              controlling the space between them. This
-              <span class="purple">padding</span> is then counteracted on the
-              rows with negative margins to ensure the content in your columns
-              is visually aligned down the left side. Rows also support modifier
-              classes to uniformly apply column sizing and gutter classes to
-              change the spacing of your content.
-            </p>
-
-            <p>
-              • Columns are incredibly flexible. There are 12 template columns
-              available per row, allowing you to create different combinations
-              of elements that span any number of columns. Column classes
-              indicate the number of template columns to span (e.g.,
-              <span class="purple">col-4</span> spans four)
-              <span class="purple">.widths</span> are set in percentages so you
-              always have the same relative sizing.
-            </p>
-
-            <p>
-              • Gutters are also responsive and customizable. Gutter classes are
-              available across all breakpoints, with all the same sizes as our
-              margin and padding spacing. Change horizontal gutters with
-              <span class="purple">.gx-*</span> classes, vertical gutters with
-              <span class="purple">.gy-*</span>, or all gutters with
-              <span class="purple">.g-*</span> classes.
-              <span class="purple">.g-0 </span> is also available to remove
-              gutters.
-            </p>
+          <div class="form-eg" style="height: 50px;gap: 20px;">
+            <button type="button" class="btn btn-primary"style="background-color:blue;color: white;padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Primary</button>
+            <button type="button" class="btn btn-secondary"style="background-color:gray;color: white;padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Secondary</button>
+            <button type="button" class="btn btn-success"style="background-color:green;color: white;padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Success</button>
+            <button type="button" class="btn btn-danger"style="background-color:red;color: white;padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Danger</button>
+            <button type="button" class="btn btn-warning"style="background-color:yellow;color: black;padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Warning</button>
+            <button type="button" class="btn btn-info"style="background-color:blue;color: white;padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Info</button>
+            <button type="button" class="btn btn-light"style="background-color:white;color: black;padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Light</button>
+            <button type="button" class="btn btn-dark"style="background-color:transparent;color: white;padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Dark</button>
+            
+            <button type="button" class="btn btn-link"style="background-color:transparent;color: blue;text-decoration:underline;font-size:20px  padding: 5px 10px;border-radius:7px;border:none;height: 40px;">Link</button>
           </div>
         </div>
 
@@ -235,7 +200,6 @@
 &lt;/div&gt;
 </pre>
           </div>
-        
         </div>
       </div>
     </div>
