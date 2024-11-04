@@ -48,6 +48,14 @@ nav {
   margin-right: 20px;
   font-size: 20px;
   position: relative;
+  color: #00d1b2;
+  
+}
+.nav-conntents ul li:nth-child(-n+5) {
+  color: #00d1b2;
+}
+.nav-conntents ul li:nth-child(-n+5):hover {
+  color: #00d1b2;
 }
 
 .nav-conntents ul li a {
@@ -74,14 +82,13 @@ nav {
 }
 
 .nav-conntents ul li a:hover {
-  color: #00d1b2;
 }
 
 /* Button styles */
 .nav-conntents button {
-  padding: 10px 15px;
+  padding: 9px 7px;
   margin-left: 10px;
-  background-color: #00d1b2;
+  background-color: #03b499;
   border: none;
   border-radius: 5px;
   color: white;
@@ -91,7 +98,7 @@ nav {
 }
 
 .nav-conntents button:hover {
-  background-color: #00bfa5;
+  background-color: #03907d;
   transform: translateY(-2px);
 }
 
@@ -232,12 +239,85 @@ textarea {
   color: #ff5722;
   background: rgba(0, 0, 0, 0.9);
 }
+/* Style the hint container */
+/* Ensure your custom styles take precedence */
+.CodeMirror-hints {
+  border: 1px solid #333 !important; /* Border around the dropdown */
+  background-color: #444444 !important; /* Background color of the dropdown */
+  color: #fff !important; /* Text color */
+  max-height: 200px; /* Max height for the dropdown */
+  overflow-y: auto; /* Scroll if there are too many hints */
+  z-index: 1000; /* Ensure it appears above other elements */
+  font-size: 15px;
+}
+
+/* Style each hint item */
+.CodeMirror-hint {
+  padding: 5px 10px; /* Padding for hint items */
+  cursor: pointer; /* Cursor changes to pointer */
+  background-color: transparent !important; /* Remove any default background */
+  color: rgb(137, 135, 135);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+
+}
+
+/* Style for the active hint item (highlighted) */
+.CodeMirror-hint-active {
+  background-color: #555 !important; /* Background color for the active hint */
+  color: #fff !important; /* Text color for the active hint */
+}
+
+/* Optional: Add hover effect */
+.CodeMirror-hint:hover {
+  background-color: #666 !important; /* Background color on hover */
+  color: rgb(199, 196, 196);
+  
+}
+
+
+::-webkit-scrollbar {
+  width: 15px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #3d3d3d; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the thumb on hover */
+  
+}
 
 
 
+/* Hint dropdown styles */
+.hint {
+  position: absolute !important;
+  padding: 5px !important;
+  background-color: #333 !important; /* Background color of the hint */
+  color: #121111 !important; /* Text color */
+  border-radius: 3px !important;
+  font-size: 12px !important;
+  z-index: 1000 !important;
+  display: none !important; /* Initially hidden */
+  max-height: 200px !important; /* Maximum height for the dropdown */
+  overflow-y: auto !important; /* Enable scrolling if there are many suggestions */
+}
 
+.hint div {
+  padding: 5px !important; /* Padding for each suggestion */
+  cursor: pointer !important; /* Cursor style on hover */
+}
 
-
+.hint div:hover {
+  background-color: #555 !important; /* Background color on hover */
+}
 
 
 

@@ -1,6 +1,182 @@
 document.addEventListener('DOMContentLoaded', function () {
     const editors = {};
     const tagsToAutoClose = ['h1', 'h2', 'h3', 'h4', 'p', 'div', 'button', 'a', 'nav', 'footer', 'main', 'header', 'section', 'article', 'aside', 'b', 'u', 'pre'];
+    const cssProperties = [
+        'align-content',
+        'align-items',
+        'align-self',
+        'animation',
+        'animation-delay',
+        'animation-direction',
+        'animation-duration',
+        'animation-fill-mode',
+        'animation-iteration-count',
+        'animation-name',
+        'animation-timing-function',
+        'background',
+        'background-attachment',
+        'background-color',
+        'background-image',
+        'background-position',
+        'background-repeat',
+        'background-size',
+        'border',
+        'border-bottom',
+        'border-bottom-color',
+        'border-bottom-left-radius',
+        'border-bottom-right-radius',
+        'border-bottom-style',
+        'border-bottom-width',
+        'border-collapse',
+        'border-color',
+        'border-left',
+        'border-left-color',
+        'border-left-style',
+        'border-left-width',
+        'border-radius',
+        'border-right',
+        'border-right-color',
+        'border-right-style',
+        'border-right-width',
+        'border-spacing',
+        'border-style',
+        'border-top',
+        'border-top-color',
+        'border-top-left-radius',
+        'border-top-right-radius',
+        'border-top-style',
+        'border-top-width',
+        'border-width',
+        'box-shadow',
+        'color',
+        'cursor',
+        'display',
+        'flex',
+        'flex-direction',
+        'flex-wrap',
+        'float',
+        'font',
+        'font-family',
+        'font-size',
+        'font-size-adjust',
+        'font-stretch',
+        'font-style',
+        'font-variant',
+        'font-weight',
+        'height',
+        'justify-content',
+        'letter-spacing',
+        'line-height',
+        'margin',
+        'margin-bottom',
+        'margin-left',
+        'margin-right',
+        'margin-top',
+        'max-height',
+        'max-width',
+        'min-height',
+        'min-width',
+        'opacity',
+        'overflow',
+        'overflow-x',
+        'overflow-y',
+        'padding',
+        'padding-bottom',
+        'padding-left',
+        'padding-right',
+        'padding-top',
+        'position',
+        'quotes',
+        'right',
+        'text-align',
+        'text-decoration',
+        'text-indent',
+        'text-transform',
+        'top',
+        'vertical-align',
+        'visibility',
+        'white-space',
+        'width',
+        'word-spacing',
+        'z-index',
+        'background-clip',
+        'background-origin',
+        'background-position-x',
+        'background-position-y',
+        'background-repeat-x',
+        'background-repeat-y',
+        'border-image',
+        'border-image-source',
+        'border-image-slice',
+        'border-image-width',
+        'border-image-outset',
+        'clip',
+        'filter',
+        'grid',
+        'grid-area',
+        'grid-auto-columns',
+        'grid-auto-flow',
+        'grid-auto-rows',
+        'grid-column',
+        'grid-column-end',
+        'grid-column-start',
+        'grid-row',
+        'grid-row-end',
+        'grid-row-start',
+        'object-fit',
+        'overflow-wrap',
+        'resize',
+        'text-shadow',
+        'transition',
+        'transition-delay',
+        'transition-duration',
+        'transition-property',
+        'transition-timing-function',
+        'user-select',
+        
+        // Add more properties as needed
+    ];
+    const jsKeywords = [
+                        "abstract", "arguments", "await", "boolean", "break", "byte", "case", "catch",   "document",
+                             
+    "char", "class", "const", "continue", "debugger", "default", "delete", "do",
+    "double", "else", "enum", "eval", "export", "extends", "false", "final",
+    "finally", "float", "for", "function", "goto", "if", "implements", "import",
+    "in", "instanceof", "int", "interface", "let", "long", "native", "new",
+    "null", "package", "private", "protected", "public", "return", "short",
+    "static", "super", "switch", "synchronized", "this", "throw", "throws", 
+    "transient", "true", "try", "typeof", "var", "void", "volatile", "while", 
+    "with", "yield", "alert", "apply", "bind", "call", "constructor", "create", "defineProperty",
+    "defineProperties", "entries", "every", "fill", "filter", "find", "findIndex",
+    "forEach", "from", "hasOwnProperty", "includes", "indexOf", "join", "keys",
+    "map", "match", "parse", "reduce", "reduceRight", "reject", "reverse", "",
+    "some", "sort", "splice", "split", "toLocaleString", "toString()", "values","addEventListener()", "appendChild", "cloneNode", "createElement", "createTextNode",
+    "dispatchEvent", "getAttribute", "getElementsByClassName()", "getElementsByTagName()",
+    "getItem", "hasAttribute", "hasChildNodes", "insertBefore", "removeAttribute",
+    "removeChild", "setAttribute", "setItem", "style", "textContent", "querySelector()",
+    "querySelectorAll()", "toString()", "replace()", "split", "substring", "trim()",  "concat()", "copyWithin", "entries", "every", "fill", "filter", "find", "findIndex",
+    "flat", "flatMap", "forEach", "includes", "indexOf", "join", "keys", "lastIndexOf",
+    "map", "pop", "push", "reduce", "reduceRight", "reverse", "shift", "", 
+    "some", "sort", "splice", "unshift", "toString", "valueOf",  "charAt", "charCodeAt", "concat", "endsWith", "fromCharCode", "includes", 
+    "indexOf", "lastIndexOf", "localeCompare", "match", "repeat", "replace", 
+    "search", "slice()", "split", "startsWith", "substr", "substring", "toLocaleLowerCase", 
+    "toLocaleUpperCase", "toLowerCase", "toUpperCase", "trim", "trimEnd", "trimStart",  "assign", "create", "defineProperty", "defineProperties", "entries", "freeze", 
+    "fromEntries", "getOwnPropertyDescriptor", "getOwnPropertyDescriptors", 
+    "getOwnPropertyNames", "getOwnPropertySymbols", "keys", "is", "isExtensible", 
+    "isFrozen", "isSealed", "values",   "abs", "acos", "asin", "atan", "atan2", "ceil", "cos", "exp", "floor", 
+    "log", "max", "min", "pow", "random", "round", "sin", "sqrt", "tan","alignContent", "alignItems", "alignSelf", "all", "animation", "animationDelay",
+    "animationDirection", "animationDuration", "animationFillMode", "animationIterationCount",
+    "animationName", "animationTimingFunction", "backdropFilter", "background", "backgroundColor",
+    "backgroundImage", "backgroundPosition", "backgroundSize", "border", "borderColor", 
+    "borderRadius", "borderStyle", "borderWidth", "boxShadow", "color", "cursor", "display", 
+    "flex", "flexDirection", "flexGrow", "flexShrink", "flexWrap", "font", "fontFamily", 
+    "fontSize", "fontStyle", "fontWeight", "height", "justifyContent", "margin", "marginTop",
+    "marginRight", "marginBottom", "marginLeft", "opacity", "padding", "paddingTop", 
+    "paddingRight", "paddingBottom", "paddingLeft", "position", "textAlign", "textDecoration", 
+    "textTransform", "transform", "transition", "width", "zIndex"
+    ];
+    
+
     let hintElement = document.createElement('div');
   
     // Style the hint element
@@ -28,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hintElement.style.display = 'none';
     }
   
-    // Initialize CodeMirror editors for HTML, CSS, and JavaScript
+    // Initialize CodeMirror editors for HTML, CSS, JavaScript, and C
     editors.html = CodeMirror.fromTextArea(document.getElementById('html-editor'), {
         mode: "text/html",
         theme: "monokai",
@@ -46,6 +222,11 @@ document.addEventListener('DOMContentLoaded', function () {
         lineWrapping: true,
         extraKeys: {
             "Ctrl-Space": "autocomplete",
+        },
+        hintOptions: {
+            hint: getCSSHints,
+            completeSingle: false // This prevents automatic completion when there's only one match
+
         }
     });
   
@@ -56,9 +237,21 @@ document.addEventListener('DOMContentLoaded', function () {
         lineWrapping: true,
         extraKeys: {
             "Ctrl-Space": "autocomplete",
+        },
+        hintOptions: {
+            hint: getJSHints, // Use the newly created hint function
+            completeSingle: false // Prevent automatic completion when there's only one match
         }
     });
+
+ 
   
+
+    
+    
+
+
+
     // Auto-closing brackets and quotes
     Object.values(editors).forEach(editor => {
         editor.on('beforeChange', (instance, changeObj) => {
@@ -113,7 +306,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-  
+
+
     // Add auto tags like <h1></h1> when recognized tag is typed + Enter is pressed
     editors.html.on('keydown', (cm, event) => {
         const cursor = cm.getCursor();
@@ -177,6 +371,81 @@ document.addEventListener('DOMContentLoaded', function () {
             hideHint();
         }
     });
+
+
+
+
+    function getCSSHints(cm) {
+        const cursor = cm.getCursor();
+        const line = cm.getLine(cursor.line);
+        const token = cm.getTokenAt(cursor);
+        
+        // Check if the current token is a CSS property
+        const input = token.string; 
+        const currentInput = input; // Get the full input string
+        const filteredProperties = cssProperties.filter(prop => prop.startsWith(currentInput));
+    
+        // Return hints for CodeMirror
+        return {
+            list: filteredProperties,
+            from: CodeMirror.Pos(cursor.line, token.start),
+            to: CodeMirror.Pos(cursor.line, token.end)
+        };
+    }
+    editors.css.on('keyup', (cm, event) => {
+        if (event.key.length === 1) { // Only show hints for actual characters
+            cm.showHint({hint: getCSSHints});
+        }
+    });
+   
+
+
+    
+
+
+// Function to show JS suggestions
+    // Function to show JavaScript suggestions
+    function getJSHints(cm) {
+        const cursor = cm.getCursor();
+        const token = cm.getTokenAt(cursor);
+        const input = token.string;
+    
+        // Log the input being processed
+    
+        // Check if the input is valid
+        if (!input || input.trim() === "") {
+            return {
+                list: [],
+                from: CodeMirror.Pos(cursor.line, token.start),
+                to: CodeMirror.Pos(cursor.line, token.end)
+            };
+        }
+    
+        // Filter the keywords based on input
+        const filteredKeywords = jsKeywords.filter(keyword => keyword.startsWith(input));
+    
+        // Log the filtered keywords
+    
+        return {
+            list: filteredKeywords,
+            from: CodeMirror.Pos(cursor.line, token.start),
+            to: CodeMirror.Pos(cursor.line, token.end)
+        };
+    }
+    
+  // Assuming editors.js is correctly initialized
+editors.javascript.on('keyup', (cm, event) => {
+    // Check if the key pressed is a printable character
+    if (event.key.length === 1) {
+        // Call showHint with the hint function
+        cm.showHint({ hint: getJSHints });
+    }
+});
+
+
+
+
+    
   
     function updateOutput() {
         const htmlCode = editors.html ? editors.html.getValue() : '';
@@ -188,7 +457,7 @@ document.addEventListener('DOMContentLoaded', function () {
             padding: 10px;
             font-family: Arial, sans-serif;
           }
-          ${editors.css ? editors.css.getValue() : ''}
+          ${editors.css ? editors.css.getValue() : ''} 
         </style>`;
         const jsCode = `<script>${editors.javascript ? editors.javascript.getValue() : ''}<\/script>`;
   
@@ -212,8 +481,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
         localStorage.setItem('htmlCode', htmlCode);
         localStorage.setItem('cssCode', cssCode);
-        localStorage.setItem('jsCode', jsCode);
-    }
+        localStorage.setItem('jsCode', jsCode);    }
   
     function loadSavedCode() {
         const savedHtml = localStorage.getItem('htmlCode');
@@ -226,7 +494,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
         updateOutput();
     }
-  
     function clearCode() {
         editors.html.setValue('');
         editors.css.setValue('');

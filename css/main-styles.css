@@ -86,7 +86,7 @@ nav {
 .nav-conntents button {
   padding: 10px 15px;
   margin-left: 10px;
-  background-color: #00d1b2;
+  background-color: #03b499;
   border: none;
   border-radius: 5px;
   color: white;
@@ -96,7 +96,7 @@ nav {
 }
 
 .nav-conntents button:hover {
-  background-color: #00bfa5;
+  background-color: #03907d;
   transform: translateY(-2px);
 }
 
