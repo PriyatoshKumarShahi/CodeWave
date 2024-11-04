@@ -445,6 +445,78 @@ editors.javascript.on('keyup', (cm, event) => {
 
 
 
+
+
+// Toggle dropdown visibility for each three-dot menu
+document.querySelectorAll(".menu-icon").forEach((menuIcon) => {
+    menuIcon.addEventListener("click", (event) => {
+        const dropdown = event.currentTarget.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    });
+});
+
+// Function to download code based on language
+function downloadCode(language) {
+    let codeContent;
+    let fileExtension;
+    let fileName;
+
+    switch (language) {
+        case 'html':
+            codeContent = editors.html.getValue();
+            fileExtension = 'html';
+            fileName = 'index';
+            break;
+        case 'css':
+            codeContent = editors.css.getValue();
+            fileExtension = 'css';
+            fileName = 'style';
+            break;
+        case 'js':
+            codeContent = editors.javascript.getValue();
+            fileExtension = 'js';
+            fileName = 'script';
+            break;
+        
+        default:
+            console.error("Unsupported language for download.");
+            return;
+    }
+
+    const blob = new Blob([codeContent], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${fileName}.${fileExtension}`;
+    document.body.appendChild(a);
+    a.click();
+    URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+
+// Add click events to each download button
+document.querySelectorAll(".download-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+        const language = event.currentTarget.getAttribute("data-language");
+        downloadCode(language);
+        // Close the dropdown after download
+        event.currentTarget.parentElement.style.display = "none";
+    });
+});
+
+// Close dropdown if clicked outside
+window.addEventListener("click", (event) => {
+    document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+        if (!dropdown.contains(event.target) && !dropdown.previousElementSibling.contains(event.target)) {
+            dropdown.style.display = "none";
+        }
+    });
+});
+
+
+
+
+
     
   
     function updateOutput() {

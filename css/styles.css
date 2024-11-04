@@ -80,10 +80,6 @@ nav {
 .nav-conntents ul li a:hover::after {
   width: 100%;
 }
-
-.nav-conntents ul li a:hover {
-}
-
 /* Button styles */
 .nav-conntents button {
   padding: 9px 7px;
@@ -106,6 +102,79 @@ nav {
   text-decoration: none;
   color: white;
 }
+
+
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 2px; 
+}
+
+.menu-icon {
+  font-size: 25px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 35px;
+  height: 30px;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 520px;
+  margin-top: -100px;
+  
+}
+
+.menu-icon:hover {
+  background-color: rgb(56, 56, 56);
+  border-radius: 15px;
+}
+
+.menu-icon:active {
+  transform: scale(0.9); /* slight scaling effect on click */
+  background-color: darkgray; /* optional - darker shade on click */
+}
+
+.dropdown-content {
+  display: none;
+  width: 130px;
+  position: absolute;
+  right: 0;
+  background-color: #101010;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 0;
+  transform: scaleY(0.95); /* slightly scale down initially */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+
+}
+
+.menu:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: scaleY(1); /* scale up smoothly */
+}
+
+.dropdown-content button {
+  width: 100%;
+  background-color: #101010;
+
+  padding:5px 10px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, ;
+  border-radius: 8px;
+  color: rgb(126, 125, 125);
+font-size: 17px;
+}
+
+.dropdown-content button:hover {
+  background-color: #1d1d1d;
+  color: white;
+}
+
+
 
 
 /* Default dark mode styles (default mode) */
@@ -325,8 +394,7 @@ textarea {
 
 
 
-/* Style for the button */
-.copy-btn {
+/* .copy-btn {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -341,19 +409,16 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* position: relative; */
 }
 
-/* Hover effect for the button */
 .copy-btn:hover {
   background-color: #555;
 }
 
-/* Tooltip text on hover */
 .copy-btn::after {
   content: 'Copy';
   position: absolute;
-  top: 33px; /* Adjust this value to move the tooltip */
+  top: 33px; 
   right: 50%;
   transform: translateX(50%);
   background-color: #100f0f;
@@ -369,11 +434,10 @@ textarea {
   pointer-events: none;
 }
 
-/* Show tooltip on hover */
 .copy-btn:hover::after {
   opacity: 1;
   visibility: visible;
-}
+} */
 
 
 
@@ -383,11 +447,7 @@ textarea {
 
 
 
-.copy-btn i {
-  pointer-events: none; /* Disable pointer events on the icon */
-  margin-right: 5px;
-  color: rgb(132, 131, 131);
-}
+
 
 
 /* Main heading styling */

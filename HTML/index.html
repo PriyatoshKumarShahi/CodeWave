@@ -56,7 +56,6 @@
     </nav>
 
     <h1 class="main-heading">Code Editor</h1>
-    
     <div id="dropzone">
         <p>Drag and Drop your HTML, CSS, or JS files here</p>
     </div>
@@ -64,27 +63,56 @@
     <div class="editor-container">
         <div class="editor-section">
             <h3>HTML</h3>
+            <div class="menu">
+                <button class="menu-icon">⋮</button>
+                <div class="dropdown-content">
+                    <button class="download-btn" data-language="html">
+                        <i class="fa-solid fa-download"></i>
+
+                        Download </button>
+                    <button class="copy-btn" id="copy-html">
+                        <i class="fa-regular fa-copy"></i> Copy Code
+                    </button>
+                </div>
+            </div>
             <textarea id="html-editor"></textarea>
-            <button class="copy-btn" id="copy-html">
-                <i class="fa-regular fa-copy"></i>                
-                Copy Code
-            </button>
+           
         </div>
         <div class="editor-section">
             <h3>CSS</h3>
+            <div class="menu">
+                <button class="menu-icon">⋮</button>
+                <div class="dropdown-content">
+                    <button class="download-btn" data-language="css">
+                        <i class="fa-solid fa-download"></i>
+                        Download </button>
+                    <button class="copy-btn" id="copy-css">
+                        <i class="fa-regular fa-copy"></i>                
+                        Copy Code
+                    </button>
+                </div>
+            </div>
+    
             <textarea id="css-editor"></textarea>
-            <button class="copy-btn" id="copy-css">
-                <i class="fa-regular fa-copy"></i>                
-                Copy Code
-            </button>
+          
         </div>
         <div class="editor-section">
             <h3>JavaScript</h3>
+            <div class="menu">
+                <button class="menu-icon">⋮</button>
+                <div class="dropdown-content">
+                    <button class="download-btn" data-language="js">
+                        <i class="fa-solid fa-download"></i>
+
+                        Download </button>
+                    <button class="copy-btn" id="copy-js">
+                        <i class="fa-regular fa-copy"></i>
+                        Copy Code
+                    </button>
+                </div>
+            </div>
             <textarea id="js-editor"></textarea>
-            <button class="copy-btn" id="copy-js">
-                <i class="fa-regular fa-copy"></i>
-                Copy Code
-            </button>
+          
         </div>
     </div>
 
