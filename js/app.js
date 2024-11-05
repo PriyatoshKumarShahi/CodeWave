@@ -514,6 +514,29 @@ window.addEventListener("click", (event) => {
 });
 
 
+const toggleButton = document.getElementById('toggle-theme');
+const sunIcon = document.getElementById('sun-icon');
+const moonIcon = document.getElementById('moon-icon');
+
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+
+    // Toggle icons based on the current mode
+    if (document.body.classList.contains('light-mode')) {
+        moonIcon.style.display = 'inline'; // Show sun icon
+        sunIcon.style.display = 'none';   // Hide moon icon
+    } else {
+        moonIcon.style.display = 'none';    // Hide sun icon
+        sunIcon.style.display = 'inline';  // Show moon icon
+    }
+});
+
+
+
+
+
+
+
 
 
 
