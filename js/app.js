@@ -548,28 +548,33 @@ toggleButton.addEventListener('click', () => {
 
 
 
-
 // Event listener for saving code
 document.getElementById('saveCodeButton').addEventListener('click', saveCode);
 
 async function saveCode() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        alert('You need to be logged in to save code.');
+        return;
+    }
+
     // Get the code from each editor
     const htmlCode = editors.html.getValue();
     const cssCode = editors.css.getValue();
     const jsCode = editors.javascript.getValue();
-    
+
     try {
         // Send a POST request to save the code
         const response = await fetch('http://localhost:5000/api/code/save', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${localStorage.getItem('token')}`
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({
                 language: 'html-css-js',
-                code: { htmlCode, cssCode, jsCode },
-                title: 'User Code' // Adjust this as needed
+                title: 'User Code', // Adjust title as needed
+                code: { htmlCode, cssCode, jsCode }
             })
         });
 
@@ -587,20 +592,25 @@ async function saveCode() {
 
 // Function to load saved code when the user logs in
 async function loadUserCode() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        alert('You need to be logged in to load saved code.');
+        return;
+    }
+
     try {
         const response = await fetch('http://localhost:5000/api/code/retrieve', {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer ${localStorage.getItem('token')}`
+                'Authorization': `Bearer ${token}`
             }
         });
 
         if (response.ok) {
             const data = await response.json();
-            // Assuming data.savedCode is an array of code snippets
             if (data.savedCode && data.savedCode.length > 0) {
-                // Set values in editors from the first saved snippet, or adjust as needed
-                const lastSavedCode = data.savedCode[0]; // Retrieve the latest saved code
+                // Retrieve the latest saved code
+                const lastSavedCode = data.savedCode[0];
                 editors.html.setValue(lastSavedCode.code.htmlCode || '');
                 editors.css.setValue(lastSavedCode.code.cssCode || '');
                 editors.javascript.setValue(lastSavedCode.code.jsCode || '');
