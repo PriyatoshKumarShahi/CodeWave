@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.removeItem("token"); // Remove the token
       
       window.location.href = "main.html"; // Redirect to home or login page
-
-    alert("Loogout Successfully from CodeWave")
+    alert("Logout Successfully from CodeWave")
   });
 });
