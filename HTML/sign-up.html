@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="form-container">
-        <form class="slide-down-form">
+        <form class="slide-down-form" id="registerForm">
             <h2>New User? Register on CodeWave</h2>
             <label for="name">Username</label>
             <input type="text" id="name" placeholder="Enter Your Name" name="name" required>
@@ -40,6 +40,48 @@
             <p>Already have an account?</p> <span class="sign-in-register"><a  href="sign-in.html"style="margin-top: -8px; margin-left: -10px;">👉 Sign in </a></span>        </form>
     </div>
     <script>
+
+document.getElementById('registerForm').addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent form submission
+
+    const username = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    try {
+        const response = await fetch('http://localhost:5000/api/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, email, password }),
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            alert('Registered Successfully')
+            window.location.href = 'index.html'; // Example redirect
+
+            // Optionally, redirect or show a success message
+        } else {
+            alert(`${data.message}`)
+            // Show error message to the user
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
         // For the Create Password field
 const togglePassword = document.querySelector('#togglePassword');
 const passwordField = document.querySelector('#password');

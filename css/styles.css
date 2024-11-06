@@ -136,10 +136,14 @@ nav {
   text-decoration: none;
   color: white;
 }
+#logout-btn{
+  margin-right: 100px;
+}
 
 #css-editor{
   color: var(--css-color);
 }
+
 
 
 .menu {
@@ -237,7 +241,7 @@ font-size: 17px;
 
 
 /* Default dark mode styles (default mode) */
-#clear-code {
+#clear-code , #saveCodeButton {
   background-color: rgb(174, 174, 252);
   color: #0f0e0e;
   padding: 5px 10px;
@@ -251,6 +255,9 @@ font-size: 17px;
 }
 
 #clear-code:hover {
+  background-color: rgb(132, 145, 247);
+}
+#saveCodeButton:hover {
   background-color: rgb(132, 145, 247);
 }
 
@@ -272,9 +279,31 @@ font-size: 17px;
   visibility: hidden; /* Hide initially */
   /* transition-delay: 0.5s;  */
 }
+#saveCodeButton:after {
+  content: "Save Code"; /* Text to display */
+  position: absolute;
+  bottom: 35px; /* Position it below the button */
+  left: 52%;
+  transform: translateX(-50%);
+  background-color: #080808;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 5px;
+  font-size: 16px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden; /* Hide initially */
+  /* transition-delay: 0.5s;  */
+}
 
 /* Show tooltip on hover with delay */
 #clear-code:hover:after {
+  opacity: 1;
+  visibility: visible; 
+  transition-delay: 0.3s; 
+}
+#saveCodeButton:hover:after {
   opacity: 1;
   visibility: visible; 
   transition-delay: 0.3s; 

@@ -479,7 +479,6 @@ function downloadCode(language) {
             break;
         
         default:
-            console.error("Unsupported language for download.");
             return;
     }
 
@@ -514,6 +513,17 @@ window.addEventListener("click", (event) => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
 const toggleButton = document.getElementById('toggle-theme');
 const sunIcon = document.getElementById('sun-icon');
 const moonIcon = document.getElementById('moon-icon');
@@ -530,6 +540,82 @@ toggleButton.addEventListener('click', () => {
         sunIcon.style.display = 'inline';  // Show moon icon
     }
 });
+
+
+
+
+
+
+
+
+
+
+document.getElementById('saveCodeButton').addEventListener('click', saveCode);
+
+async function saveCode() {
+    // Get the code from each editor
+    const htmlCode = editors.html.getValue();
+    const cssCode = editors.css.getValue();
+    const jsCode = editors.javascript.getValue();
+    
+    try {
+        // Send a POST request to save the code
+        const response = await fetch('http://localhost:5000/api/code/save', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}` // Include auth token
+            },
+            body: JSON.stringify({ htmlCode, cssCode, jsCode })
+        });
+
+        if (response.ok) {
+            alert('Code saved successfully!');
+        } else {
+            const errorData = await response.json();
+            alert(`Error: ${errorData.message}`);
+        }
+    } catch (error) {
+        alert('An error occurred while saving your code.');
+    }
+}
+
+// Function to load saved code when the user logs in
+async function loadUserCode() {
+    try {
+        const response = await fetch('http://localhost:5000/api/code/retrieve', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            if (data.htmlCode || data.cssCode || data.jsCode) {
+                editors.html.setValue(data.htmlCode || '');
+                editors.css.setValue(data.cssCode || '');
+                editors.javascript.setValue(data.jsCode || '');
+            }
+        } else {
+            const errorData = await response.json();
+            alert(`${errorData.message}`)
+        }
+    } catch (error) {
+        alert(`${error}`)
+    }
+}
+
+// Load the saved code when the page loads (if user is logged in)
+document.addEventListener('DOMContentLoaded', () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+        loadUserCode(); // Load saved code if user is logged in
+    }
+});
+
+
+
 
 
 

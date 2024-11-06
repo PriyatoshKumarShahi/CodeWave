@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/css/sign-in.css">
 </head>
 <body>
-    <div class="form-container">
-        <form class="slide-down-form">
+    <div class="form-container" >
+        <form class="slide-down-form" id="loginForm">
             <h2>Sign in to CodeWave</h2>
             <label for="name">Email / Phone</label>
             <input type="text" id="name" placeholder="Email or Phone" name="name" required>
@@ -33,6 +33,42 @@
             <p>New User?</p> <span class="sign-up-register"><a  href="sign-up.html" style="margin-top: -8px; margin-left: -10px;">👉Register Here</a></span>
         </form>
     </div>
-    <script src="sign-in.js"></script>
+    <script src="/js/logout-handle.js"></script>
+
+    <script>
+
+        // Login logic
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('name').value;
+            const password = document.getElementById('password').value;
+    
+            try {
+                const response = await fetch('http://localhost:5000/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+    
+                const data = await response.json();
+                if (response.ok) {
+                    // Store token in local storage
+                    localStorage.setItem('token', data.token);
+                    
+                    // Optionally redirect or load user-specific data
+                    alert(`Login Successfully`)
+                    window.location.href = 'index.html'; // Example redirect
+                } else {
+            alert(`${data.message}`)
+                         
+                }
+            } catch (error) {
+            }
+        });
+    </script>
+
+
 </body>
 </html>
