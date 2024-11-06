@@ -58,20 +58,26 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
         });
 
         const data = await response.json();
-        if (response.ok) {
-            alert('Registered Successfully')
-            window.location.href = 'main.html'; // Example redirect
 
-            // Optionally, redirect or show a success message
+        if (response.ok) {
+            // Store the token in localStorage
+            if (data.token) {
+                localStorage.setItem('token', data.token);
+                console.log("Token saved:", data.token); // Optional: log token for verification
+            } else {
+                console.error("No token received in response");
+            }
+
+            alert('Registered Successfully');
+            window.location.href = 'main.html'; // Example redirect
         } else {
-            alert(`${data.message}`)
-            // Show error message to the user
+            alert(`Error: ${data.message}`);
         }
     } catch (error) {
         console.error('Error:', error);
+        alert('An error occurred during registration.');
     }
 });
-
 
 
 

@@ -3,12 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerButton = document.getElementById("registerButton");
   const logoutButton = document.getElementById("logoutButton");
 
-  // Log to see if token is detected
   console.log("Checking login status...");
   const token = localStorage.getItem("token");
-  console.log("Token found:", token);
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // Check login status
 
-  if (token) {
+  if (token && isLoggedIn) {
       loginButton.style.display = "none";
       registerButton.style.display = "none";
       logoutButton.style.display = "block";
@@ -23,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Logout functionality
   logoutButton.addEventListener("click", () => {
       localStorage.removeItem("token"); // Remove the token
-      
+      localStorage.removeItem("isLoggedIn"); // Clear login status
       window.location.href = "main.html"; // Redirect to home or login page
-    alert("Logout Successfully from CodeWave")
+      alert("Logout Successfully from CodeWave");
   });
 });

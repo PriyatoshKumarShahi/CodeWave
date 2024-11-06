@@ -549,7 +549,7 @@ toggleButton.addEventListener('click', () => {
 
 
 
-
+// Event listener for saving code
 document.getElementById('saveCodeButton').addEventListener('click', saveCode);
 
 async function saveCode() {
@@ -564,9 +564,13 @@ async function saveCode() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${localStorage.getItem('token')}` // Include auth token
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
             },
-            body: JSON.stringify({ htmlCode, cssCode, jsCode })
+            body: JSON.stringify({
+                language: 'html-css-js',
+                code: { htmlCode, cssCode, jsCode },
+                title: 'User Code' // Adjust this as needed
+            })
         });
 
         if (response.ok) {
@@ -576,6 +580,7 @@ async function saveCode() {
             alert(`Error: ${errorData.message}`);
         }
     } catch (error) {
+        console.error('Error saving code:', error);
         alert('An error occurred while saving your code.');
     }
 }
@@ -592,17 +597,21 @@ async function loadUserCode() {
 
         if (response.ok) {
             const data = await response.json();
-            if (data.htmlCode || data.cssCode || data.jsCode) {
-                editors.html.setValue(data.htmlCode || '');
-                editors.css.setValue(data.cssCode || '');
-                editors.javascript.setValue(data.jsCode || '');
+            // Assuming data.savedCode is an array of code snippets
+            if (data.savedCode && data.savedCode.length > 0) {
+                // Set values in editors from the first saved snippet, or adjust as needed
+                const lastSavedCode = data.savedCode[0]; // Retrieve the latest saved code
+                editors.html.setValue(lastSavedCode.code.htmlCode || '');
+                editors.css.setValue(lastSavedCode.code.cssCode || '');
+                editors.javascript.setValue(lastSavedCode.code.jsCode || '');
             }
         } else {
             const errorData = await response.json();
-            alert(`${errorData.message}`)
+            alert(`Error loading code: ${errorData.message}`);
         }
     } catch (error) {
-        alert(`${error}`)
+        console.error('Error retrieving code:', error);
+        alert('An error occurred while loading your code.');
     }
 }
 
@@ -613,8 +622,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loadUserCode(); // Load saved code if user is logged in
     }
 });
-
-
 
 
 

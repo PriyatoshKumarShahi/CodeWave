@@ -33,7 +33,6 @@
             <p>New User?</p> <span class="sign-up-register"><a  href="sign-up.html" style="margin-top: -8px; margin-left: -10px;">👉Register Here</a></span>
         </form>
     </div>
-    <script src="/js/logout-handle.js"></script>
 
     <script>
 
@@ -54,13 +53,12 @@
     
                 const data = await response.json();
                 if (response.ok) {
-                    // Store token in local storage
-                    localStorage.setItem('token', data.token);
-                    
-                    // Optionally redirect or load user-specific data
-                    alert(`Login Successfully`)
-                    window.location.href = 'main.html'; // Example redirect
-                } else {
+    localStorage.setItem("token", data.token); // Store token
+    localStorage.setItem("isLoggedIn", "true"); // Mark as logged in
+    alert("Logged in Successfully");
+    window.location.href = "main.html"; // Redirect if needed
+}
+ else {
             alert(`${data.message}`)
                          
                 }
