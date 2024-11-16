@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerButton = document.getElementById("registerButton");
   const logoutButton = document.getElementById("logoutButton");
 
-  console.log("Checking login status...");
   const token = localStorage.getItem("token");
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // Check login status
 
@@ -11,12 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
       loginButton.style.display = "none";
       registerButton.style.display = "none";
       logoutButton.style.display = "block";
-      console.log("User is logged in; displaying logout button.");
   } else {
       loginButton.style.display = "block";
       registerButton.style.display = "block";
       logoutButton.style.display = "none";
-      console.log("User is not logged in; displaying login and register buttons.");
   }
 
   // Logout functionality

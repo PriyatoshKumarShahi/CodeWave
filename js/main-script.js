@@ -18,6 +18,8 @@ function type() {
   }
 }
 
+
+
 function erase() {
   if (charIndex > 0) {
     typedText.textContent = textArray[textArrayIndex].substring(
@@ -32,6 +34,7 @@ function erase() {
     setTimeout(type, 1000);
   }
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(type, 1000);

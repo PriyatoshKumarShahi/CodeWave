@@ -144,6 +144,15 @@ nav {
   color: var(--css-color);
 }
 
+#profileIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
 
 
 .menu {
